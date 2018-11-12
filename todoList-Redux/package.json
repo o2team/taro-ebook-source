@@ -1,0 +1,36 @@
+{
+	"name": "todos",
+	"version": "1.0.0",
+	"private": true,
+	"description": "taro 集成 redux 例子",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "MIT",
+	"dependencies": {
+		"@tarojs/components": "1.1.4",
+		"@tarojs/redux": "1.1.4",
+		"@tarojs/router": "1.1.4",
+		"@tarojs/taro": "1.1.4",
+		"@tarojs/taro-h5": "1.1.4",
+		"@tarojs/taro-weapp": "1.1.4",
+		"nervjs": "^1.2.18",
+		"redux": "^4.0.0",
+		"redux-action": "^1.2.2",
+		"redux-logger": "^3.0.6",
+		"redux-thunk": "^2.3.0"
+	},
+	"devDependencies": {
+		"@tarojs/plugin-babel": "1.1.4",
+		"@tarojs/plugin-csso": "1.1.4",
+		"@tarojs/plugin-sass": "1.1.4",
+		"@tarojs/plugin-uglifyjs": "1.1.4",
+		"@tarojs/webpack-runner": "1.1.4",
+		"babel-plugin-transform-class-properties": "^6.24.1",
+		"babel-plugin-transform-decorators-legacy": "^1.3.4",
+		"babel-plugin-transform-object-rest-spread": "^6.26.0",
+		"babel-preset-env": "^1.6.1"
+	}
+}

@@ -1,0 +1,36 @@
+.todos {
+  padding: 20px 40px;
+  font-size: 30px;
+  line-height: 36px;
+
+  &_item {
+    margin-top: 20px;
+  }
+
+  .add_wrap {
+    margin-bottom: 40px;
+    overflow: hidden;
+  }
+
+  input {
+    width: 576px;
+    float: left;
+    border: 1px solid #999;
+    border-right: none;
+    padding-left: 20px;
+  }
+
+  .del,
+  .add {
+    float: right;
+    border: 1px solid #999;
+    padding: 0 25px;
+    background: #999;
+    color: #fff;
+  }
+
+  .add {
+    float: left;
+    line-height: 52px;
+  }
+}
