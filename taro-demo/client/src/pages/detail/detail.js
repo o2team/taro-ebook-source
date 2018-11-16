@@ -181,7 +181,7 @@ class Detail extends Component {
       detailInfoRow,
       isShowCartLayer,
       serviceInfo,
-      // systemInfo,
+      systemInfo,
       showColorValue,
       showSizeValue
     } = this.state

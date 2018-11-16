@@ -40,18 +40,13 @@
 }
 
 .detail_arrow {
-  width: 20px;
-  height: 20px;
-  border-right: 2px solid #666666;
-  border-bottom: 2px solid #666666;
-  transform: rotate(-45deg);
-  position: absolute;
-  top: 50%;
-  margin-top: -9px;
-  right: 40px;
+  font-size: 32px;
+  color: grey;
 }
 
 .detail_section_main_bd {
+  //display: flex;
+  //flex-direction: row;
   word-wrap: break-word;
   word-break: break-all;
 }
@@ -63,19 +58,27 @@
   -webkit-box-orient: vertical;
 }
 
+.detail_goods_price_txt {
+  font-family: "toplifeCustomEn";
+}
+
 /*postcss-pxtransform rn eject disable*/
 
-.order_detail-scroll {
-
+.order_detail {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: white;
 }
 
-.detail {
+.order_detail-scroll {
+  display: flex;
+  flex-grow: 1;
+}
+
+.user_detail {
   padding: 0 20px;
   padding-bottom: 100px;
-}
-
-.detail.ipx {
-  padding-bottom: 168px;
 }
 
 .detail_tip {
@@ -84,32 +87,35 @@
 }
 
 .detail_tip_wrapper {
+  display: flex;
+  flex-direction: row;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  //box-sizing: border-box;
   padding: 16px 40px;
-  font-size: 24px;
-  color: #FFFFFF;
   background-color: rgba(33, 35, 35, 0.8);
-  display: flex;
   z-index: 99;
 }
 
 .detail_tip_txt {
+  display: flex;
+  flex-direction: row;
   flex: 1;
   width: 100%;
   overflow: hidden;
-  display: flex;
 }
 
 .detail_tip_txt_tit {
+  color: white;
+  font-size: 24px;
   width: 130px;
 }
 
 .detail_tip_txt_cnt {
   flex: 1;
+  font-size: 24px;
+  color: white;
   width: 100%;
 }
 
@@ -147,22 +153,29 @@
 
 .detail_tit {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   padding: 32px 12px;
   font-size: 24px;
 }
 
 .detail_cancel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   position: relative;
   background-color: #FFFFFF;
   height: 100px;
   margin-bottom: 20px;
   padding: 0 40px;
   line-height: 100px;
-  display: flex;
-  justify-content: space-between;
   font-size: 24px;
   //box-shadow: 0 0 6px rgba(0, 0, 0, 0.06);
+}
+
+.detail_cancel_progress {
+  display: flex;
+  flex-direction: row;
 }
 
 .detail_section {
@@ -174,9 +187,10 @@
 
 .detail_section_item {
   padding: 34px 0;
-  //border-bottom: 1px solid #dddddd;
+  border-width: 0 0 2px 0;
+  border-bottom-color: #dddddd;
+  border-style: solid;
   display: flex;
-  flex-direction: row;
 }
 
 .detail_section_item:last-child {
@@ -190,6 +204,12 @@
 .detail_section_icon_img {
   width: 60px;
   height: 60px;
+}
+
+.detail_pay_icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .detail_section_main {
@@ -219,27 +239,62 @@
 
 .detail_get {
   line-height: 1;
+  flex-direction: row;
+}
+
+.detail_get_address {
+  color: #999;
+  font-size: 24px;
 }
 
 .detail_get_hd {
+  display: flex;
+  flex-direction: row;
   margin-bottom: 25px;
 }
 
+.detail_express {
+  display: flex;
+  flex-direction: row;
+}
+
+.detail_express_tit {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.detail_express_codtime, .detail_express_track_txt, .detail_express_track_time {
+  font-size: 24px;
+  color: #999;
+}
+
 .detail_express_track {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   position: relative;
   padding: 17px 60px 30px 17px;
   background-color: #f8f8f8;
   margin-top: 16px;
 }
 
+.detail_express_track_left {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 .detail_express_track_time {
   margin-top: 10px;
 }
 
-.detail_shop {
+.user_detail_shop {
   padding: 25px 0;
   text-align: center;
-  //border-bottom: 1px solid #dddddd;
+  border-width: 0 0 2px 0;
+  border-bottom-color: #dddddd;
+  border-style: solid;
   line-height: 1;
 }
 
@@ -253,15 +308,20 @@
 
 .detail_goods {
   display: flex;
+  flex-direction: column;
   padding-top: 60px;
 }
 
 .detail_goods_list {
-  //border-bottom: 1px solid #dddddd;
+  display: flex;
+  border-width: 0 0 2px 0;
+  border-bottom-color: #dddddd;
+  border-style: solid;
 }
 
 .detail_goods_item {
   display: flex;
+  flex-direction: row;
   margin-bottom: 40px;
 }
 
@@ -277,39 +337,44 @@
 }
 
 .detail_goods_info {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  width: 100%;
-  flex: 1;
   height: 200px;
 }
 
 .detail_goods_tit {
   font-size: 26px;
-  line-height: 38px;
+  //line-height: 38px;
   margin-bottom: 12px;
   overflow: hidden;
 }
 
 .detail_goods_attr {
-  font-size: 24px;
-  color: #999999;
+  display: flex;
+  flex-direction: row;
 }
 
 .detail_goods_attr_txt {
+  font-size: 24px;
+  color: #999999;
   margin-right: 22px;
 }
 
 .detail_goods_pc {
   display: flex;
+  flex-direction: row;
   position: absolute;
+  align-items: center;
   left: 0;
   bottom: 0;
-  line-height: 1;
   width: 100%;
-  align-items: center;
 }
 
 .detail_goods_price {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
   flex: 1;
   width: 100%;
 }
@@ -320,7 +385,6 @@
 
 .detail_goods_price_txt {
   font-size: 32px;
-  //font-family: "toplifeCustomEn";
 }
 
 .detail_goods_count {
@@ -328,29 +392,41 @@
 }
 
 .detail_goods_total {
+  display: flex;
+  flex-direction: row;
   padding-top: 34px;
   overflow: hidden;
-  color: #999999;
-  font-size: 24px;
 }
 
 .detail_goods_total_count {
-  width: 300px;
-  //float: left;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
 }
 
 .detail_goods_total_count_txt {
   margin: 0 10px;
+  color: #999999;
+  font-size: 24px;
 }
 
 .detail_goods_total_account {
-  //float: right;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.fs-m {
+  font-size: 24px;
+}
+
+.color-grey {
+  color: #999999;
 }
 
 .detail_goods_total_item {
   display: flex;
-  line-height: 1.6;
-  text-align: right;
+  flex-direction: row;
 }
 
 .detail_goods_total_item_tit {
@@ -358,11 +434,12 @@
 }
 
 .detail_goods_total_item_info {
-  flex: 1;
-  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
-.detail_goods_total_item.stress {
+.detail_goods_total_item_stress {
   align-items: baseline;
   color: #222222;
 }
@@ -376,7 +453,25 @@
 }
 
 .detail_pay {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   line-height: 60px;
+}
+
+.detail_pay_hd {
+  display: flex;
+  flex-direction: row;
+}
+
+.detail_invoice {
+  display: flex;
+  flex-direction: row;
+}
+
+.detail_invoice_hd {
+  display: flex;
+  flex-direction: row;
 }
 
 .detail_invoice.noinvoice {
@@ -384,42 +479,65 @@
 }
 
 .detail_invoice_up, .detail_invoice_cnt {
+  display: flex;
+  flex-direction: row;
+}
+
+.detail_invoice_up, .detail_invoice_cnt {
   margin-bottom: 12px;
 }
 
-.detail_invoice_up_txt {
+.detail_invoice_up_tit, .detail_invoice_up_txt {
+  color: #999999;
+  font-size: 24px;
   //word-wrap: break-word;
   //word-break: break-all;
 }
 
-.detail_invoice_cnt_txt {
+.detail_invoice_cnt_tit, .detail_invoice_cnt_txt {
+  color: #999999;
+  font-size: 24px;
   //word-wrap: break-word;
   //word-break: break-all;
+}
+
+.detail_invoice_get {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 .detail_invoice_get_btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: 200px;
   height: 48px;
-  line-height: 48px;
-  border: 2px solid #232321;
-  font-size: 24px;
+  border: 1px solid #232321;
   border-radius: 0;
   background-color: #FFFFFF;
-  //box-sizing: border-box;
   margin-right: 0;
 }
 
+.detail_invoice_get_btn_text {
+  font-size: 24px;
+  color: #999999;
+}
+
 .detail_ft {
+  display: flex;
+  flex-direction: row;
   padding: 10px 20px 30px 20px;
+}
+
+.detail_ft_text {
   font-size: 24px;
   color: #999999;
   line-height: 40px;
 }
 
 .detail_ops {
-  position: fixed;
-  bottom: 0;
-  left: 0;
   width: 100%;
   height: 100px;
   background: #232321;
@@ -427,19 +545,16 @@
 
 .detail_ops_btns {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100px;
   background: #232321;
   position: relative;
 }
 
-.detail_ops_form {
-  width: 100%;
-  flex: 1;
-}
-
 .detail_ops_btn {
-  width: 100%;
+  text-align: center;
   flex: 1;
-  line-height: 100px;
   font-size: 28px;
   color: #FFFFFF;
   background: #232321;
@@ -448,13 +563,18 @@
 }
 
 .detail_ops_split {
-  width: 1px;
+  width: 2px;
   height: 30px;
-  background: #3b3b3b;
-  margin-top: 35px;
+  background: grey;
 }
 
 .detail_ops_pay {
+  height: 100px;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   background-color: #c0a369;
   color: #232321;
   font-size: 32px;

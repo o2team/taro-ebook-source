@@ -57,6 +57,9 @@ input[type="text"], textarea {
 }
 
 .taro_page {
+  color: #232321;
+  background-color: #f4f1f1!important;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
   height: 100%;
 }
 
@@ -79,6 +82,10 @@ button {
   &:after {
     border-radius: 0;
   }
+}
+
+scroll-view {
+  overflow: scroll;
 }
 
 @font-face {

@@ -86,7 +86,7 @@ class CartSub extends Component {
         <ScrollView
           className={cartClass}
           scroll-y={!showEidtBox}
-          style={`height: ${windowHeight}px`}
+          style={`height: ${windowHeight - 50}px`}
           onScroll={this.onViewScroll}
           enable-back-to-top={true}
         >

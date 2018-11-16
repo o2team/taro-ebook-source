@@ -105,7 +105,6 @@ class Shop extends Component {
     const {isFirst} = this.state
     const {banner = [], floors = [], venderId} = this.props.shop
     const isIphonex = getSystemInfo().isIpx
-    const isScroll = true
     return !isFirst && (
       <View className='shop_nocate' style={isIphonex ? 'padding-bottom: 164rpx;' : ''}>
         <View className='topbar'>
@@ -124,7 +123,7 @@ class Shop extends Component {
             {this.state.showMore && <View className='mask' onClick={this.toggleShowMore} />}
           </View>
         </View>
-        <ScrollView scrollY={isScroll} className='shop_main-scroll'>
+        <ScrollView scrollY className='shop_main-scroll'>
           <Swiper
             className='shop_main_swiper'
             indicatorDots

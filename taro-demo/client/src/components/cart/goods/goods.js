@@ -36,7 +36,7 @@ class Goods extends Component {
     const { footmark, isSub } = this.props
     const hasNofootmark = !footmark || footmark.length === 0
     return (
-      <View className='goods_wp' style={isSub ? 'margin-bottom: 50px' : ''}>
+      <View className='goods_wp'>
         <View className='goods'>
           <View className='goods_tab'>
             <View className='goods_tab_item on'>

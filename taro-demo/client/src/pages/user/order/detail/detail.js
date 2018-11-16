@@ -32,7 +32,7 @@ export default class OrderDetail extends Component {
     navigationBarTitleText: '订单详情',
     enablePullDownRefresh: true,
     backgroundTextStyle: 'dark',
-    disableScroll:true
+    disableScroll: true
   }
 
   constructor () {
@@ -129,12 +129,12 @@ export default class OrderDetail extends Component {
 
   gotoBrand (venderId) {
     if (venderId) {
-      jumpUrl(`/pages/shop/shop?venderId=${venderId}`)
+      jumpUrl(`../../../shop/shop?venderId=${venderId}`)
     }
   }
 
   gotoDetail (skuId) {
-    jumpUrl(`/pages/detail/detail?skuId=${skuId}`)
+    jumpUrl(`../../../detail/detail?skuId=${skuId}`)
   }
 
   closeTip = () => {
@@ -244,207 +244,225 @@ export default class OrderDetail extends Component {
     const freightPrice = 14
 
     return !isFirst && canShowDetail && (
-      <ScrollView scrollY className="order_detail-scroll">
-        <View className={'detail' + (isIpx ? ' ipx' : '')}>
-          {isShowTip && (orderState === 5 || orderState === 6) && <View className='detail_tip'>
-            <View className='detail_tip_wrapper'>
-              <View className='detail_tip_txt'>
-                <Text className='detail_tip_txt_tit'>温馨提示：</Text>
-                <Text className='detail_tip_txt_cnt'>小程序暂不支持申请维修售后，如有需要请前往APP。</Text>
-              </View>
-              <View className='detail_tip_close' onClick={this.closeTip}/>
-            </View>
-          </View>}
-          {isShowTip && (orderState === 1) && <View className='detail_tip'>
-            <View className='detail_tip_wrapper'>
-              <View className='detail_tip_txt'>
-                <Text className='detail_tip_txt_tit'>温馨提示：</Text>
-                <Text className='detail_tip_txt_cnt'>该订单需要在下单后24小时内完成支付，超时订单将会被取消。</Text>
-              </View>
-              <View className='detail_tip_close' onClick={this.closeTip}/>
-            </View>
-          </View>}
-          <View className='detail_tit'>
-            <Text className='detail_num'>订单号：{orderId}</Text>
-            <Text className='detail_status'>状态：{orderStateStr}</Text>
-          </View>
-          {<View className='detail_cancel'>
-            <View className='detail_cancel_progress'>
-              <Text>{orderState === 1 ? '订单进度：' : '取消原因：'}</Text><Text>{cancelReasonText}</Text>
-            </View>
-            <View className='detail_arrow'/>
-          </View>}
-          <View className='detail_info detail_section'>
-            <View className='detail_get detail_section_item'>
-              <View className='detail_section_icon detail_get_icon'>
-                <Image className='detail_section_icon_img' src={iconImg1} />
-              </View>
-              <View className='detail_section_main detail_get_main'>
-                <View className='detail_get_hd detail_section_main_hd'>
-                  <Text className='detail_section_main_hd_tit'>A小伙伴</Text>
-                  <Text className='detail_section_main_hd_txt'>118******45</Text>
+      <View className='order_detail'>
+        <ScrollView scrollY className="order_detail-scroll">
+          <View className='user_detail'>
+            {isShowTip && (orderState === 5 || orderState === 6) && <View className='detail_tip'>
+              <View className='detail_tip_wrapper'>
+                <View className='detail_tip_txt'>
+                  <Text className='detail_tip_txt_tit'>温馨提示：</Text>
+                  <Text className='detail_tip_txt_cnt'>小程序暂不支持申请维修售后，如有需要请前往APP。</Text>
                 </View>
-                <Text className='detail_get_address detail_section_main_bd'>广东省深圳市宝安区龙光世纪大厦</Text>
-              </View>
-            </View>
-            {<View className='detail_express detail_section_item'>
-              <View className='detail_section_icon detail_express_icon'>
-                <Image className='detail_section_icon_img' src={iconImg2} />
-              </View>
-              <View className='detail_section_main detail_express_main'>
-                <View className='detail_express_tit detail_section_main_hd'>
-                  <Text className='detail_express_tit_name detail_section_main_hd_tit'>Taro商城配送</Text>
-                  <Text className='detail_express_tit_num detail_section_main_hd_txt'>运单编号：8247023234</Text>
-                </View>
-                <View className='detail_section_main_bd'>
-                  <Text className='detail_express_codtime'>期望配送时间：2020-01-12[周一] 09:00-19:00</Text>
-                  <View className='detail_express_track'>
-                    <Text className='detail_express_track_txt'>你订单尚未支付，请去系统确认</Text>
-                    <Text className='detail_express_track_time'>{orderDate}</Text>
-                    <View className='detail_arrow' />
-                  </View>
-                </View>
+                <View className='detail_tip_close' onClick={this.closeTip} />
               </View>
             </View>}
-          </View>
-          <View className='detail_main detail_section'>
-            <View className='detail_shop' onClick={this.gotoBrand.bind(this, venderId)}>
-              <Image className='detail_shop_img' src={shopInfoSrc} />
+            {isShowTip && (orderState === 1) && <View className='detail_tip'>
+              <View className='detail_tip_wrapper'>
+                <View className='detail_tip_txt'>
+                  <Text className='detail_tip_txt_tit'>温馨提示：</Text>
+                  <Text className='detail_tip_txt_cnt'>该订单需要在下单后24小时内完成支付，超时订单将会被取消。</Text>
+                </View>
+                <View className='detail_tip_close' onClick={this.closeTip} />
+              </View>
+            </View>}
+            <View className='detail_tit'>
+              <Text className='detail_num'>订单号：{orderId}</Text>
+              <Text className='detail_status'>状态：{orderStateStr}</Text>
             </View>
-            <View className='detail_goods detail_section_item'>
-              <View className='detail_goods_list'>
-                {skuInfoList.map(sku => {
-                  return (
-                    <View className='detail_goods_item' key={sku.skuId} onClick={this.gotoDetail.bind(this, sku.skuId)}>
-                      <View className='detail_goods_show'>
-                        <Image className='detail_goods_img' src={sku.imageUrl} mode='aspectFill' />
+            {<View className='detail_cancel'>
+              <View className='detail_cancel_progress'>
+                <Text>{orderState === 1 ? '订单进度：' : '取消原因：'}</Text><Text>{cancelReasonText}</Text>
+              </View>
+              <Text className='detail_arrow'>{'>'}</Text>
+            </View>}
+            <View className='detail_info detail_section'>
+              <View className='detail_get detail_section_item'>
+                <View className='detail_section_icon detail_get_icon'>
+                  <Image className='detail_section_icon_img' src={iconImg1} />
+                </View>
+                <View className='detail_section_main detail_get_main'>
+                  <View className='detail_get_hd detail_section_main_hd'>
+                    <Text className='detail_section_main_hd_tit'>A小伙伴</Text>
+                    <Text className='detail_section_main_hd_txt'>118******45</Text>
+                  </View>
+                  <Text className='detail_get_address'>广东省深圳市宝安区龙光世纪大厦</Text>
+                </View>
+              </View>
+              {<View className='detail_express detail_section_item'>
+                <View className='detail_section_icon detail_express_icon'>
+                  <Image className='detail_section_icon_img' src={iconImg2} />
+                </View>
+                <View className='detail_section_main detail_express_main'>
+                  <View className='detail_express_tit detail_section_main_hd'>
+                    <Text className='detail_express_tit_name detail_section_main_hd_tit'>Taro商城配送</Text>
+                    <Text className='detail_express_tit_num detail_section_main_hd_txt'>运单编号：8247023234</Text>
+                  </View>
+                  <View className='detail_section_main_bd'>
+                    <Text className='detail_express_codtime'>期望配送时间：2020-01-12[周一] 09:00-19:00</Text>
+                    <View className='detail_express_track'>
+                      <View className='detail_express_track_left'>
+                        <Text className='detail_express_track_txt'>你订单尚未支付，请去系统确认</Text>
+                        <Text className='detail_express_track_time'>{orderDate}</Text>
                       </View>
-                      <View className='detail_goods_info'>
-                        <Text className='detail_goods_tit'>{sku.info.skuName}</Text>
-                        <View className='detail_goods_attr'>
-                          {sku.info.colorInfo.value &&
-                          <Text className='detail_goods_attr_txt'>{sku.info.colorInfo.name}：{sku.info.colorInfo.value}</Text>}
-                          {sku.info.sizeInfo.value &&
-                          <Text className='detail_goods_attr_txt'>{sku.info.sizeInfo.name}：{sku.info.sizeInfo.value}</Text>}
+                      <Text className='detail_arrow'>{'>'}</Text>
+                    </View>
+                  </View>
+                </View>
+              </View>}
+            </View>
+            <View className='detail_main detail_section'>
+              <View className='user_detail_shop' onClick={this.gotoBrand.bind(this, venderId)}>
+                <Image mode='scaleToFill' className='detail_shop_img' src={'http:' + shopInfoSrc} />
+              </View>
+              <View className='detail_goods detail_section_item'>
+                <View className='detail_goods_list'>
+                  {skuInfoList.map(sku => {
+                    return (
+                      <View className='detail_goods_item' key={sku.skuId} onClick={this.gotoDetail.bind(this, sku.skuId)}>
+                        <View className='detail_goods_show'>
+                          <Image className='detail_goods_img' src={sku.imageUrl} mode='aspectFit' />
                         </View>
-                        <View className='detail_goods_pc'>
-                          <View className='detail_goods_price'>
-                            <Text className='detail_goods_price_symbol'>￥</Text>
-                            <Text className='detail_goods_price_txt'>{sku.info.price}</Text>
+                        <View className='detail_goods_info'>
+                          <Text className='detail_goods_tit'>{sku.info.skuName}123</Text>
+                          <View className='detail_goods_attr'>
+                            {
+                              sku.info.colorInfo.value &&
+                              <Text className='detail_goods_attr_txt'>{sku.info.colorInfo.name}：{sku.info.colorInfo.value}</Text>
+                            }
+                            {
+                              sku.info.sizeInfo.value &&
+                              <Text className='detail_goods_attr_txt'>{sku.info.sizeInfo.name}：{sku.info.sizeInfo.value}</Text>
+                            }
                           </View>
-                          <Text className='detail_goods_count'>X{sku.num}</Text>
+                          <View className='detail_goods_pc'>
+                            <View className='detail_goods_price'>
+                              <Text className='detail_goods_price_symbol'>￥</Text>
+                              <Text className='detail_goods_price_txt'>{sku.info.price}</Text>
+                            </View>
+                            <Text className='detail_goods_count'>X{sku.num}</Text>
+                          </View>
                         </View>
                       </View>
-                    </View>
-                  )
-                })}
-              </View>
-              <View className='detail_goods_total'>
-                <View className='detail_goods_total_count'><Text>共</Text><Text
-                  className='detail_goods_total_count_txt'>{totalGoodsCount}</Text>件商品</View>
-                <View className='detail_goods_total_account'>
-                  <View className='detail_goods_total_item'>
-                    <View className='detail_goods_total_item_tit'>商品小计：</View>
-                    <View className='detail_goods_total_item_info'><Text
-                      className='detail_goods_total_item_symbol'>￥</Text>{parseMoney(shouldPayPrice - freightPrice)}</View>
+                    )
+                  })}
+                </View>
+                <View className='detail_goods_total'>
+                  <View className='detail_goods_total_count'>
+                    <Text className='detail_goods_total_count_txt'>共{totalGoodsCount}件商品</Text>
                   </View>
-                  <View className='detail_goods_total_item'>
-                    <View className='detail_goods_total_item_tit'>运费：</View>
-                    <View className='detail_goods_total_item_info'><Text className='detail_goods_total_item_symbol'>￥</Text>{parseMoney(freightPrice)}
+                  <View className='detail_goods_total_account'>
+                    <View className='detail_goods_total_item'>
+                      <Text className='detail_goods_total_item_tit fs-m color-grey'>商品小计：</Text>
+                      <View className='detail_goods_total_item_info'>
+                        <Text className='detail_goods_total_item_symbol fs-m color-grey'>￥</Text>
+                        <Text className='fs-m color-grey'>{parseMoney(shouldPayPrice - freightPrice)}</Text>
+                      </View>
                     </View>
-                  </View>
-                  <View className='detail_goods_total_item stress'>
-                    <View className='detail_goods_total_item_tit'>支付金额：</View>
-                    <View className='detail_goods_total_item_info'><Text className='detail_goods_total_item_symbol'>￥</Text>{parseMoney(
-                      shouldPayPrice)}</View>
+                    <View className='detail_goods_total_item'>
+                      <Text className='detail_goods_total_item_tit fs-m color-grey'>运费：</Text>
+                      <View className='detail_goods_total_item_info'>
+                        <Text className='detail_goods_total_item_symbol fs-m color-grey'>￥</Text>
+                        <Text className='fs-m color-grey'>{parseMoney(freightPrice)}</Text>
+                      </View>
+                    </View>
+                    <View className='detail_goods_total_item detail_goods_total_item_stress'>
+                      <Text className='detail_goods_total_item_tit fs-m'>支付金额：</Text>
+                      <View className='detail_goods_total_item_info'>
+                        <Text className='detail_goods_total_item_symbol'>￥</Text>
+                        <Text>{parseMoney(shouldPayPrice)}</Text>
+                      </View>
+                    </View>
                   </View>
                 </View>
               </View>
             </View>
-          </View>
-          <View className='detail_finance detail_section'>
-            <View className='detail_pay detail_section_item'>
-              <View className='detail_section_icon detail_pay_icon'>
-                <Image className='detail_section_icon_img' src={iconImg3} />
+            <View className='detail_finance detail_section'>
+              <View className='detail_pay detail_section_item'>
+                <View className='detail_section_icon detail_pay_icon'>
+                  <Image className='detail_section_icon_img' src={iconImg3} />
+                </View>
+                <View className='detail_section_main detail_pay_main'>
+                  <View className='detail_pay_hd detail_section_main_hd'>
+                    <Text className='detail_section_main_hd_tit'>支付方式</Text>
+                    <Text className='detail_section_main_hd_txt'>{payType === 4 ? '微信支付' : '货到付款'}</Text>
+                  </View>
+                </View>
               </View>
-              <View className='detail_section_main detail_pay_main'>
-                <View className='detail_pay_hd detail_section_main_hd'>
-                  <Text className='detail_section_main_hd_tit'>支付方式</Text>
-                  <Text className='detail_section_main_hd_txt'>{payType === 4 ? '微信支付' : '货到付款'}</Text>
+              <View className='detail_invoice detail_section_item noinvoice'>
+                <View className='detail_section_icon detail_invoice_icon'>
+                  <Image className='detail_section_icon_img' src={iconImg4} />
+                </View>
+                <View className='detail_section_main detail_invoice_main'>
+                  <View className='detail_invoice_hd detail_section_main_hd'>
+                    <Text className='detail_section_main_hd_tit'>发票信息</Text>
+                    <Text className='detail_section_main_hd_txt'>我是发票信息啊啊啊</Text>
+                  </View>
+                  <View className='detail_invoice_bd detail_section_main_bd'>
+                    <View className='detail_invoice_up'>
+                      <Text className='detail_invoice_up_tit'>发票抬头：</Text>
+                      <Text className='detail_invoice_up_txt'>发票抬头ABCDEFG</Text>
+                    </View>
+                    <View className='detail_invoice_cnt'>
+                      <Text className='detail_invoice_cnt_tit'>发票内容：</Text>
+                      <Text className='detail_invoice_cnt_txt'>发票内容LIJHUH</Text>
+                    </View>
+                    <View className='detail_invoice_get'>
+                      <View className='detail_invoice_get_btn'>
+                        <Text className='detail_invoice_get_btn_text'>查看发票</Text>
+                      </View>
+                    </View>
+                  </View>
                 </View>
               </View>
             </View>
-            {<View className='detail_invoice detail_section_item noinvoice'>
-              <View className='detail_section_icon detail_invoice_icon'>
-                <Image className='detail_section_icon_img' src={iconImg4} />
-              </View>
-              <View className='detail_section_main detail_invoice_main'>
-                <View className='detail_invoice_hd detail_section_main_hd'>
-                  <Text className='detail_section_main_hd_tit'>发票信息</Text>
-                  <Text className='detail_section_main_hd_txt'>我是发票信息啊啊啊</Text>
-                </View>
-                {<View className='detail_invoice_bd detail_section_main_bd'>
-                  <View className='detail_invoice_up'>
-                    <Text className='detail_invoice_up_tit'>发票抬头：</Text>
-                    <Text className='detail_invoice_up_txt'>发票抬头ABCDEFG</Text>
-                  </View>
-                  <View className='detail_invoice_cnt'>
-                    <Text className='detail_invoice_cnt_tit'>发票内容：</Text>
-                    <Text className='detail_invoice_cnt_txt'>发票内容LIJHUH</Text>
-                  </View>
-                  {<View className='detail_invoice_get'>
-                    <Button className='detail_invoice_get_btn'>查看发票</Button>
-                  </View>}
-                </View>}
-              </View>
-            </View>}
+            <View className='detail_ft'>
+              <Text className='detail_ft_text'>下单时间：</Text>
+              <Text className='detail_ft_text'>{orderDate}</Text>
+            </View>
+            {isShowCancelReasonPanel && <SelectPanel
+              title='取消原因'
+              subTitle='取消原因'
+              tips={cancelTips}
+              cancelBtnText='暂不取消'
+              confirmBtnText='确定取消'
+              detail={cancelReason}
+              onClose={this.onHideCancelReason.bind(this)}
+              onSelected={this.onCancelOrder.bind(this)} />}
+            {isShowRefundReasonPanel && <SelectPanel
+              title='退款原因'
+              subTitle='退款原因'
+              tips={cancelTips}
+              cancelBtnText='暂不退款'
+              confirmBtnText='确定退款'
+              detail={refundReason}
+              onClose={this.hideRefundReasonPanel.bind(this)}
+              onSelected={this.refundOrder.bind(this)} />}
+            {isShowUserAuthModal && <Modal
+              title='授权提示'
+              contentText='TARO商城请求获取授权信息，以便记录您的订单'
+              onCancelCallback={this.onHideUserAuthModal.bind(this)}
+              onConfirmCallback={this.onPrcoessAuthResult.bind(this)}
+              isAuth={true} />}
           </View>
-          <View className='detail_ft'>
-            <View><Text>下单时间：</Text><Text>{orderDate}</Text></View>
-          </View>
-          <View className='detail_ops'>
-            {/** 已取消/已完成 */}
-            {(orderState === -1 || orderState === 5 || orderState === 6) && <View className={'detail_ops_btns' + (isIpx ? ' fix_ipx' : '')}>
-              <Button className='detail_ops_btn' onClick={this.deleteOrder}>删除订单</Button>
-              <View className='detail_ops_split'/>
-              <Button className='detail_ops_btn' onClick={this.contactService}>联系客服</Button>
-            </View>}
-            {/** 待支付 */}
-            {(orderState === 1) && <View className={'detail_ops_btns' + (isIpx ? ' fix_ipx' : '')}>
-              <Button className='detail_ops_btn' onClick={this.getCancelReason}>取消订单</Button>
-              <View className='detail_ops_split'/>
-              <Button className='detail_ops_btn' onClick={this.contactService}>联系客服</Button>
-              {!isShowUserAuth ? <Form className='detail_ops_form' onSubmit={this.payOrder.bind(this, detail)} reportSubmit='true'>
-                <Button className='detail_ops_btn detail_ops_pay' formType='submit'>马上付款</Button>
-              </Form> : <Button className='detail_ops_btn detail_ops_pay' onClick={this.showUserAuthModal}>马上付款</Button>}
-            </View>}
-          </View>
-          {isShowCancelReasonPanel && <SelectPanel
-            title='取消原因'
-            subTitle='取消原因'
-            tips={cancelTips}
-            cancelBtnText='暂不取消'
-            confirmBtnText='确定取消'
-            detail={cancelReason}
-            onClose={this.onHideCancelReason.bind(this)}
-            onSelected={this.onCancelOrder.bind(this)} />}
-          {isShowRefundReasonPanel && <SelectPanel
-            title='退款原因'
-            subTitle='退款原因'
-            tips={cancelTips}
-            cancelBtnText='暂不退款'
-            confirmBtnText='确定退款'
-            detail={refundReason}
-            onClose={this.hideRefundReasonPanel.bind(this)}
-            onSelected={this.refundOrder.bind(this)} />}
-          {isShowUserAuthModal && <Modal
-            title='授权提示'
-            contentText='TARO商城请求获取授权信息，以便记录您的订单'
-            onCancelCallback={this.onHideUserAuthModal.bind(this)}
-            onConfirmCallback={this.onPrcoessAuthResult.bind(this)}
-            isAuth={true} />}
+        </ScrollView>
+        <View className='detail_ops'>
+          {/** 已取消/已完成 */}
+          {(orderState === -1 || orderState === 5 || orderState === 6) && <View className={'detail_ops_btns' + (isIpx ? ' fix_ipx' : '')}>
+            <Button className='detail_ops_btn' onClick={this.deleteOrder}>删除订单</Button>
+            <View className='detail_ops_split' />
+            <Button className='detail_ops_btn' onClick={this.contactService}>联系客服</Button>
+          </View>}
+          {/** 待支付 */}
+          {(orderState === 1) && <View className='detail_ops_btns'>
+            <Text className='detail_ops_btn' onClick={this.getCancelReason}>取消订单</Text>
+            <View className='detail_ops_split' />
+            <Text className='detail_ops_btn' onClick={this.contactService}>联系客服</Text>
+            {!isShowUserAuth
+              ? <View className='detail_ops_pay' onClick={this.payOrder.bind(this, detail)}><Text>马上付款</Text></View>
+              : <View className='detail_ops_pay' onClick={this.showUserAuthModal}><Text>马上付款</Text></View>}
+          </View>}
         </View>
-      </ScrollView>
+      </View>
     )
   }
 }
