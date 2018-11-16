@@ -57,9 +57,8 @@ page {
   height: 100%;
   display: flex;
   flex-direction: column;
-  //padding-bottom: 100px;
   background-color: #f2efef;
-  //box-sizing: border-box;
+  overflow: hidden;
 }
 
 .cart-scroll {

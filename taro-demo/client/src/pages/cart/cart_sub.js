@@ -19,10 +19,11 @@ import './cart.scss'
 class CartSub extends Component {
   config = {
     navigationBarTitleText: '购物车',
-    backgroundColor: '#f2efef'
+    backgroundColor: '#f2efef',
+    disableScroll: true
   }
 
-  constructor() {
+  constructor () {
     super(...arguments)
     this.state = {
       isLogin: Boolean(getLoginStatus()),
@@ -34,7 +35,7 @@ class CartSub extends Component {
     this.pageScrollFn = throttle(this.isNeedFixedBar, 200, this)
   }
 
-  componentDidShow() {
+  componentDidShow () {
     const isLogin = Boolean(getLoginStatus())
     this.props.fetchCart()
     this.setState({
@@ -43,30 +44,30 @@ class CartSub extends Component {
     })
   }
 
-  onViewScroll(e) {
-    this.pageScrollFn(e.detail.scrollTop)
+  onViewScroll (e) {
+    this.pageScrollFn && this.pageScrollFn(e.detail.scrollTop)
   }
 
-  isNeedFixedBar(top) {
-    const { isFixedBar } = this.state
+  isNeedFixedBar (top) {
+    const {isFixedBar} = this.state
     this.scrollTop = top
     let needTop = 45
     if (top > needTop) {
-      !isFixedBar && this.setState({ isFixedBar: true })
+      !isFixedBar && this.setState({isFixedBar: true})
     } else {
-      isFixedBar && this.setState({ isFixedBar: false })
+      isFixedBar && this.setState({isFixedBar: false})
     }
   }
 
-  render() {
-    const { isLogin, isFixedBar, systemInfo } = this.state
-    const { commoditys, editSkuData, isFetching } = this.props
+  render () {
+    const {isLogin, isFixedBar, systemInfo} = this.state
+    const {commoditys, editSkuData, isFetching} = this.props
 
     const showEidtBox = editSkuData.showEidtBox
 
     const hasCommodity = commoditys.length !== 0
 
-    const cartClass = classnames('cart', { 'no_bottom': !hasCommodity && !isLogin })
+    const cartClass = classnames('cart-scroll', {'no_bottom': !hasCommodity && !isLogin})
 
     const newSystemInfo = getSystemInfo()
 
@@ -76,41 +77,42 @@ class CartSub extends Component {
     }
 
     if (isFetching) {
-      Taro.showLoading({ title: '请求加载中...' })
+      Taro.showLoading({title: '请求加载中...'})
     } else {
       Taro.hideLoading()
     }
 
     return (
-      <View>
+      <View className='cart'>
         <ScrollView
           className={cartClass}
-          scroll-y={!showEidtBox}
-          style={`height: ${windowHeight - 50}px`}
+          scrollY={!showEidtBox}
           onScroll={this.onViewScroll}
-          enable-back-to-top={true}
+          enable-back-to-top
+
         >
           <CommondityContainer isLogin={isLogin} isFixedBar={isFixedBar} />
-          <Goods isSub={true} />
+          <Goods isSub />
           {/* <ServiceBox /> */}
         </ScrollView>
         {showEidtBox ? <EditBox /> : null}
-        <BottomBar isLogin={isLogin} isSub={true} />
+        <BottomBar isLogin={isLogin} isSub />
       </View>
     )
   }
 }
 
-export default connect(({
-  cart,
-  home
-}) => ({
+export default connect((
+  {
+    cart,
+    home
+  }) => ({
   floorData: home.floorData || {},
   commoditys: cart.commoditys,
   editSkuData: cart.editSkuData,
   isFetching: cart.isFetching
 }), (dispatch) => ({
-  fetchCart(...args) {
+  fetchCart (...args) {
     dispatch(fetchCart(...args))
   }
 }))(CartSub)
