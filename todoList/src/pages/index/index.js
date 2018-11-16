@@ -23,12 +23,9 @@ export default class Index extends Component {
   // ... 生命周期函数，暂时不需要关注
 
   addItem () {
-    let { list } = this.state
-    const inputVal = this.inputVal
+    let { list, inputVal } = this.state
     if (inputVal == '') return
-    else{
-      list.push(inputVal)
-    }
+    list.push(inputVal)
     this.setState({
       list,
       inputVal: ''
@@ -44,8 +41,7 @@ export default class Index extends Component {
   }
 
   inputHandler (e) {
-    // 不参与渲染的变量可不使用state储存，提高性能
-    this.inputVal = e.target.value
+    this.setState({ inputVal: e.target.value })
   }
 
   render () {
