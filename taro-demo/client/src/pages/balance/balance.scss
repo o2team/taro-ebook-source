@@ -1,0 +1,487 @@
+/*postcss-pxtransform rn eject enable*/
+
+@keyframes showPanelMask {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showDetailWrapper {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hidePanelMask {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hideDetailWrapper {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+//.balance_tip_close .icon {
+//  display: inline-block;
+//  width: 34px;
+//  height: 34px;
+//  background: url("https://static.360buyimg.com/tp-statics/2018-4-20/m/img/ic_close1@2x.png") no-repeat;
+//  background-size: 100% 100%;
+//}
+
+.balance_addr_icon {
+  width: 30px;
+  height: 40px;
+  background: url("https://static.360buyimg.com/tp-statics/2018-4-20/m/img/ic_shdz30x40@2x.png") no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 20px 0 40px;
+}
+
+.balance_pay_choose .method.checked::after {
+  content: "";
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  right: 20px;
+  top: 28px;
+  background: url("https://static.360buyimg.com/tp-statics/2018-4-24/m/img/choose_icon@2x.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.balance_addr {
+  transition: opacity 300ms ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.balance_pay_info .coupon_val {
+  font-family: "toplifeCustomEn";
+}
+
+.balance_pay_info_val {
+  max-width: 400px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*postcss-pxtransform rn eject disable*/
+
+.balance_page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.balance {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: #f4f1f1;
+}
+
+.balance.has_tip {
+  padding-top: 100px;
+}
+
+.balance_tip {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100px;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  background-color: rgba(35, 35, 33, 0.8);
+}
+
+.balance_tip_text {
+  flex: 1;
+  padding-left: 60px;
+  //max-width: 550px;
+  font-size: 24px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.balance_tip_close {
+  width: 100px;
+  justify-content: center;
+  text-align: center;
+}
+
+.balance_tip_close_image {
+  width: 34px;
+  height: 34px;
+}
+
+.balance_tit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 40px 0 30px;
+}
+
+.balance_tit_text {
+  color: #232321;
+  font-size: 32px;
+}
+
+.balance_addr {
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  bottom: 100px;
+  background-color: rgba(35, 35, 33, 0.8);
+  color: #fff;
+  font-size: 24px;
+  line-height: 70px;
+  opacity: 1;
+}
+
+.balance_addr.top {
+  opacity: 0;
+}
+
+.balance_footer {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #232321;
+}
+
+.balance_footer_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 520px;
+  height: 100px;
+  padding-left: 40px;
+}
+
+.balance_footer_info_text {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.money {
+  color: #fff;
+  font-size: 32px;
+}
+
+.num {
+  color: #fff;
+  margin-right: 10px;
+}
+
+.balance_footer_btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #c0a369;
+  width: 230px;
+  height: 100px;
+}
+
+.balance_footer_btn_text{
+  text-align: center;
+  line-height: 100px;
+  font-weight: 300;
+  font-size: 32px;
+}
+
+.balance_pay {
+  color: #999;
+}
+
+.balance_pay_info {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  height: 125px;
+  background-color: #f8f8f8;
+  line-height: 125px;
+  padding: 0 30px;
+  margin-bottom: 20px;
+}
+
+.balance_pay_info_label {
+  width: 110px;
+  font-weight: 100;
+  color: #232321;
+}
+
+.balance_pay_info_val {
+  max-width: 400px;
+  overflow: hidden;
+}
+
+.balance_pay_info .coupon_val {
+  color: #232321;
+}
+
+.balance_pay_info .coupon_num {
+  padding: 0 20px;
+  background-color: #232321;
+  color: #fff;
+  line-height: 40px;
+  vertical-align: middle;
+  position: relative;
+  top: 43px;
+}
+
+.balance_pay_info .arrow {
+  top: 40px;
+}
+
+.balance_pay_choose {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.balance_pay_choose.show {
+  opacity: 1;
+  z-index: 10;
+}
+
+.balance_pay_choose.show .mask {
+  animation-name: showPanelMask;
+}
+
+.balance_pay_choose.show .main {
+  animation-name: showDetailWrapper;
+}
+
+.balance_pay_choose .mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  animation-name: hidePanelMask;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.balance_pay_choose .main {
+  width: 100%;
+  height: 420px;
+  position: fixed;
+  padding-top: 20px;
+  bottom: 0;
+  background-color: #fff;
+  animation-name: hideDetailWrapper;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.balance_pay_choose .btn_close {
+  height: 100px;
+  text-align: center;
+  color: #fff;
+  line-height: 100px;
+  background-color: #232321;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.balance_pay_choose .close_wrap {
+  height: 80px;
+}
+
+.balance_pay_choose .icon_close {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 40px;
+  top: 30px;
+}
+
+.balance_pay_choose .icon_close::before, .balance_pay_choose .icon_close::after {
+  content: "";
+  width: 60px;
+  height: 1px;
+  top: 30px;
+  right: 0;
+  position: absolute;
+  background-color: #999;
+}
+
+.balance_pay_choose .icon_close::before {
+  transform: rotate(-45deg);
+}
+
+.balance_pay_choose .icon_close::after {
+  transform: rotate(45deg);
+}
+
+.balance_pay_choose .method {
+  height: 80px;
+  margin: 20px 40px;
+  border: 2px solid #ddd;
+  line-height: 80px;
+  text-indent: 60px;
+}
+
+.balance_pay_choose .method.checked {
+  background-color: #232321;
+  border-color: #232321;
+  color: #fff;
+  position: relative;
+}
+
+.balance_amount {
+  color: #999;
+}
+
+.balance_grey {
+  color: #999;
+}
+
+.balance_amount_info {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  line-height: 38px;
+}
+
+.balance_amount_info .label {
+
+}
+
+.balance_amount_info .val {
+  font-family: "toplifeCustomEn";
+}
+
+.val {
+  flex: 1;
+  text-align: right;
+}
+
+.balance_amount_total {
+  color: #232321;
+  margin-top: 30px;
+  font-weight: 400;
+}
+
+.balance_amount_total text {
+  font-size: 32px;
+  font-family: "toplifeCustomEn";
+}
+
+.confirm {
+  width: 100%;
+  height: 100%;
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.confirm .mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.confirm .main {
+  width: 580px;
+  height: 580px;
+  margin: auto;
+  border-radius: 20px;
+  background-color: #ededed;
+  color: #999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.confirm .title {
+  text-align: center;
+  margin-top: 45px;
+  margin-bottom: 40px;
+}
+
+.confirm .title text {
+  color: #232321;
+}
+
+.confirm .wrap {
+  max-height: 345px;
+  overflow-y: scroll;
+}
+
+.confirm .btn_group {
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  position: absolute;
+  bottom: 0;
+  border-top: 2px solid #ddd;
+}
+
+.confirm .btn_group view {
+  width: 50%;
+  text-align: center;
+}
+
+.confirm .btn_group view:last-child {
+  border-left: 2px solid #ddd;
+  color: #232321;
+}
+
+.balance_box {
+  font-size: 24px;
+  font-weight: 300;
+  background-color: #fff;
+  margin: 0 20px 20px;
+  padding: 40px;
+}
+
+.balance_slice {
+  margin-top: 30px;
+  height: 2px;
+  background-color: #ddd;
+  width: 100%;
+}

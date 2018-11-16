@@ -1,0 +1,39 @@
+.history {
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+.history_title {
+  padding: 40px;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-bottom-color: #ddd;
+}
+
+.history_title_content {
+  color: #232321;
+  font-size: 28px;
+  font-weight: 600;
+  display: flex;
+}
+
+.history_word {
+  display: flex;
+  flex-direction: row;
+  border-style: solid;
+  border-bottom-color: #ddd;
+  border-width: 0 0 1px 0;
+}
+
+.history_word_info {
+  font-size: 28px;
+  padding: 40px;
+  flex: 1;
+}
+
+.history_word_del {
+  margin: 48px 40px 0;
+  width: 26px;
+  height: 26px;
+  display: flex;
+}

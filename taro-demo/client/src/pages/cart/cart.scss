@@ -1,0 +1,71 @@
+/*postcss-pxtransform rn eject enable*/
+
+page {
+  overflow-y: hidden;
+}
+
+@keyframes slide_in {
+  0% {
+    opacity: 0;
+    transform: translateY(130%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide_out {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(130%);
+  }
+}
+
+@keyframes fade_out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.show {
+  display: block !important;
+}
+
+.show_wp {
+  animation: slide_in 0.3s ease-out forwards;
+}
+
+.hide_wp {
+  animation: slide_out 0.3s ease-in forwards;
+}
+
+.fade {
+  animation: fade_out 0.3s ease-in-out forwards;
+}
+
+/*postcss-pxtransform rn eject disable*/
+
+.cart {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  //padding-bottom: 100px;
+  background-color: #f2efef;
+  //box-sizing: border-box;
+}
+
+.cart-scroll {
+  flex-grow: 1;
+}
+
+.cart.no_bottom {
+  padding-bottom: 0;
+}

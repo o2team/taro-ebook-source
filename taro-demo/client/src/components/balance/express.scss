@@ -1,0 +1,168 @@
+/*postcss-pxtransform rn eject enable*/
+
+.balance_box {
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 2px 0 30px rgba(0, 0, 0, 0.06);
+}
+
+.balance_good .total {
+  color: #232321;
+  font-family: "toplifeCustomEn";
+}
+
+.balance_good .addr_detail .addr_text {
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.balance_good_express .express_fee {
+  font-family: "toplifeCustomEn";
+}
+
+.balance_good_express .val_time {
+  font-family: "toplifeCustomEn";
+}
+
+/*postcss-pxtransform rn eject disable*/
+
+.balance_box {
+  font-size: 24px;
+  font-weight: 300;
+  background-color: #fff;
+  margin: 0 20px 20px;
+  padding: 40px;
+}
+
+.balance_box:last-child {
+  margin-bottom: 0;
+}
+
+.addr_default {
+  color: #fff;
+  background-color: #232321;
+  margin-left: 10px;
+  padding: 0 5px;
+}
+
+.addr_detail {
+  flex: 1;
+}
+
+.addr_detail_header {
+  display: flex;
+  flex-direction: row;
+}
+
+.addr_detail_grey {
+  color: #999;
+}
+
+.addr_text {
+  color: #999;
+  margin-top: 20px;
+  font-size: 24px;
+  width: 100%;
+}
+
+.balance_good_addr {
+  display: flex;
+  flex-direction: row;
+}
+
+.balance_good_addr_icon {
+  width: 46px;
+  height: 60px;
+  position: relative;
+  top: 30px;
+  margin-right: 65px;
+}
+
+.balance_good_addr, .balance_good_express {
+  padding: 0 30px;
+  height: 125px;
+}
+
+.balance_box_arrow {
+  width: 48px;
+  height: 48px;
+}
+
+.balance_good_express {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f8f8f8;
+  margin-top: 40px;
+}
+
+.balance_good_label {
+  width: 110px;
+  color: #999;
+}
+
+.val_wrap {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.expredd_grey {
+  color: #999;
+}
+
+.val_express {
+  display: flex;
+  flex-direction: row;
+}
+
+.express_fee {
+  color: #999;
+  margin-left: 20px;
+}
+
+.val_time {
+  margin-top: 10px;
+  color: #999;
+}
+
+.balance_good .count,
+.balance_good .total {
+  margin-top: 40px;
+}
+
+.balance_good .count {
+  color: #999;
+}
+
+.balance_good .count text {
+  margin-right: 10px;
+}
+
+.balance_good .total {
+  color: #232321;
+  font-family: "toplifeCustomEn";
+}
+
+.balance_good .good_tip {
+  background-color: rgba(35, 35, 33, 0.8);
+  color: #fff;
+  padding-left: 30px;
+  height: 50px;
+  line-height: 50px;
+  margin-top: -10px;
+}
+
+.balance_slice {
+  margin-top: 30px;
+  height: 2px;
+  background-color: #ddd;
+  width: 100%;
+}
+

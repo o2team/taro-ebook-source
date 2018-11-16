@@ -1,0 +1,14 @@
+@mixin image-background($url) {
+  background: url($url) no-repeat center center;
+  background-size: 100% 100%;
+  width: width($url, 3);
+  height: height($url, 3);
+}
+
+@mixin img-bg ($url, $width, $height) {
+  display: inline-block;
+  background-image: url($url);
+  background-size: 100% 100%;
+  width: ($width);
+  height: ($height);
+}

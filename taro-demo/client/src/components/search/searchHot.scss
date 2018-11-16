@@ -1,0 +1,39 @@
+/*postcss-pxtransform rn eject enable*/
+.hot_word-keyword {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*postcss-pxtransform rn eject disable*/
+
+.hot_word {
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+.hot_word-title {
+  padding: 40px 40px 30px;
+  color: #232321;
+  font-size: 28px;
+  font-weight: 600;
+  display: flex;
+}
+
+.hot_word-list {
+  padding: 0 40px 40px;
+  display: flex;
+  flex-direction: row;
+}
+
+.hot_word-keyword {
+  color: #191919;
+  font-size: 28px;
+  border: 1px solid #ddd;
+  height: 52px;
+  line-height: 52px;
+  padding: 0 30px;
+  margin: 0 16px 16px 0;
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+}

@@ -4,4 +4,5 @@
 
 - [《用 Taro 实现一个简单的 Todo 项目》的示例](https://github.com/o2team/taro-ebook-source/tree/master/todoList)
 - [《在 Taro 中使用 Redux》的示例](https://github.com/o2team/taro-ebook-source/tree/master/todoList-Redux)
-- 实战篇电商平台的示例
+- [实战篇电商平台的示例]
+(https://github.com/o2team/taro-ebook-source/tree/master/taro-demo)

@@ -1,0 +1,94 @@
+{
+	"description": "description",
+	"packOptions": {
+		"ignore": [
+			"server",
+			"cloud"
+		]
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.3",
+	"appid": "wx9504f077bdc24ea2",
+	"projectname": "%E6%8E%98%E9%87%91%E5%B0%8F%E5%86%8Cdemo",
+	"isGameTourist": false,
+	"miniprogramRoot": "client/dist/",
+	"cloudfunctionRoot": "cloud/functions/",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 7,
+			"list": [
+				{
+					"id": -1,
+					"name": "shop",
+					"pathName": "pages/shop/shop",
+					"query": "venderId=1"
+				},
+				{
+					"id": 1,
+					"name": "cart",
+					"pathName": "pages/cart/cart",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "cloud",
+					"pathName": "pages/cloud/cloud",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "detail",
+					"pathName": "pages/detail/detail",
+					"query": "skuId=1"
+				},
+				{
+					"id": -1,
+					"name": "cart_sub",
+					"pathName": "pages/cart/cart_sub",
+					"query": "2"
+				},
+				{
+					"id": 5,
+					"name": "结算页",
+					"pathName": "pages/balance/balance",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "order",
+					"pathName": "pages/user/order/list/list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "orderDetail",
+					"pathName": "pages/user/order/detail/detail",
+					"query": "orderId=bw15krfzoiu"
+				}
+			]
+		}
+	}
+}

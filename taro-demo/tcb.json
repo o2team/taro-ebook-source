@@ -1,0 +1,11 @@
+{
+    "mpappid": "wx9504f077bdc24ea2",
+    "env": "taro-ebook-23bbcb",
+    "secretid": "AKIDhIyd705LQxzJBN1lYYVQzhbmLrMy7Btf",
+    "secretkey": "7wfqvN7OLXRZihYgrUNabufu178hWvLX",
+    "path": {
+        "storage": "./cloud/storage",
+        "database": "./cloud/database",
+        "functions": "./cloud/functions"
+    }
+}

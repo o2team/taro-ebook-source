@@ -1,0 +1,139 @@
+/*postcss-pxtransform rn eject enable*/
+
+@import '../_mixin.scss';
+
+.editbox {
+  display: none;
+  font-family: '-apple-system-font,Helvetica Neue,Helvetica,sans-serif';
+  z-index: 10;
+  &_content {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 150px;
+    width: 100%;
+    background-color: #fff;
+  }
+  &_header {
+    position: relative;
+    height: 180px;
+    &_img {
+      position: absolute;
+      left: 40px;
+      top: -60px;
+      width: 200px;
+      height: 200px;
+      border: 2px solid #ddd;
+      .taro-img,
+      image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &_text {
+      position: absolute;
+      top: 60px;
+      left: 270px;
+      &_price {
+        font-family: 'toplifeCustomEn';
+        font-size: 32px;
+        color: #232321;
+      }
+      &_desc {
+        display: block;
+        font-size: 24px;
+        line-height: 1.5;
+        color: #999999;
+      }
+      .small {
+        font-size: 16px;
+      }
+    }
+    &_close {
+      position: absolute;
+      right: 35px;
+      top: 30px;
+      @include img-bg('http://storage.jd.com/o2images/close_icon.png', 40px, 40px);
+    }
+  }
+  &_option {
+    margin-bottom: 40px;
+    padding: 0 40px;
+    color: #232321;
+    &_title {
+      font-size: 28px;
+    }
+    &_wp {
+      margin-top: 20px;
+    }
+    &_item {
+      display: inline-block;
+      margin-right: 34px;
+      margin-bottom: 30px;
+      padding: 30px 40px;
+      font-size: 24px;
+      text-align: center;
+      border: 2px solid #ddd;
+      &.on {
+        color: #fff;
+        background-color: #000;
+      }
+    }
+    &.size {
+      .editbox_option_item {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 32px;
+        box-sizing: border-box;
+      }
+    }
+  }
+  &_btn {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    color: #fff;
+    background-color: #222;
+    text-align: center;
+    font-size: 32px;
+  }
+  &_offsale {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 76px;
+    line-height: 76px;
+    color: #fff;
+    background-color: rgba(0,0,0,.7);
+    text-align: center;
+    font-size: 32px;
+  }
+}
+
+.bg_shade {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba($color: #232321, $alpha: 0.8);
+  z-index: 999;
+}
+
+
+.show {
+  display: block!important;
+}
+
+.show_wp {
+  animation: slide_in .3s ease-out forwards;
+}
+
+.hide_wp {
+  animation: slide_out .3s ease-in forwards;
+}
+
+.fade {
+  animation: fade_out .3s ease-in-out forwards;
+}

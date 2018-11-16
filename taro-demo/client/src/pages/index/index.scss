@@ -1,0 +1,153 @@
+page, body {
+  height: 100%;
+}
+
+.index {
+  background-color: #ffffff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.index-search_into {
+  padding: 30px 40px;
+  position: relative;
+  display: flex;
+  height: 120px;
+  background: #ffffff;
+}
+
+.index-search_box {
+  width: 88%;
+  margin: 0 auto;
+}
+
+.index_list.hidden {
+  height: 100%;
+  overflow: hidden;
+}
+
+.index_list {
+  //flex: 1;
+  flex-grow: 1;
+  overflow: scroll;
+}
+
+.index_item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: -1px 0 0;
+  overflow: hidden;
+}
+
+.index_item_in {
+  width: 100%;
+  height: 100%;
+}
+
+.index_item_img {
+  width: 100%;
+}
+
+.index_item_brand {
+  position: absolute;
+  top: 300px;
+  left: 0;
+  width: 100%;
+  font-size: 38px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 4px;
+  //transition: top 2s ease-in;
+}
+
+.index_item_desc {
+  position: absolute;
+  top: 358px;
+  left: 0;
+  width: 100%;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 8px;
+  color: #fff;
+  //transition: top 2s ease-in;
+}
+
+.index_item_type {
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  text-align: right;
+  color: #fff;
+  font-size: 18px;
+}
+
+.index_item_title {
+  position: absolute;
+  top: 300px;
+  left: 0;
+  width: 100%;
+  font-size: 42px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 4px;
+  //transition: top 2s ease-in;
+}
+
+.index_item_more {
+  position: absolute;
+  top: 406px;
+  left: 50%;
+  width: 228px;
+  height: 42px;
+  margin-left: -114px;
+  border: 1px solid #fff;
+  text-align: center;
+  line-height: 42px;
+  font-size: 24px;
+  color: #fff;
+  //transition: top 2s ease-in;
+}
+
+.index_item_avatar {
+  position: absolute;
+  bottom: 128px;
+  left: 50%;
+  margin-left: -25px;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 100px;
+  //transition: bottom 2s ease-in;
+}
+
+.index_item_athor {
+  position: absolute;
+  bottom: 74px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  //transition: bottom 2s ease-in;
+}
+
+.animation .index_item {
+  animation: home_move 0.5s ease-in forwards;
+}
+
+@keyframes home_move {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

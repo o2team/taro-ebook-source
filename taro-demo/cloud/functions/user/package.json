@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "tcb-admin-node": "^1.0.22"
+  }
+}

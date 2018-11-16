@@ -1,0 +1,72 @@
+/*postcss-pxtransform rn eject enable*/
+
+.search_filter_content .price_btn::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  background: rgba(0, 0, 0, 0);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #bbb;
+  position: absolute;
+  right: 32px;
+  top: 26px;
+}
+
+.search_filter_content .price_btn::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  background: rgba(0, 0, 0, 0);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #bbb;
+  position: absolute;
+  right: 32px;
+  top: 40px;
+}
+
+.search_filter_content .top::after {
+  border-bottom: 8px solid #c0a369;
+}
+
+/*postcss-pxtransform rn eject disable*/
+
+.search_filter {
+  border-width: 0 0 2px 0;
+  border-bottom-color: #eee;
+  border-style: solid;
+}
+
+.search_filter_content {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.search_filter {
+  height: 80px;
+}
+
+.result_filter_btn {
+  height: 80px;
+  line-height: 80px;
+  background-color: #fff;
+  font-size: 24px;
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.search_filter_content_active {
+  color: #c0a369;
+}
+
+.search_filter_content .bottom::before {
+  border-top: 8px solid #c0a369;
+}

@@ -1,0 +1,249 @@
+/*postcss-pxtransform rn eject enable*/
+.filter_mask_layer {
+  opacity: 0;
+  animation-name: showFilterMask;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.filter_mask_content {
+  transform: translateX(100%);
+  opacity: 0;
+  animation-name: showFilterWrapper;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showFilterMask {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showFilterWrapper {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hideFilterMask {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hideFilterWrapper {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+/*postcss-pxtransform rn eject disable*/
+
+.filter_mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 155;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.filter_mask_layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.filter_mask_content {
+  position: absolute;
+  width: 0;
+  right: 0;
+  height: 100%;
+  z-index: 101;
+  bottom: 0;
+  //overflow-y: scroll;
+  //overflow-x: hidden;
+  background: #fff;
+}
+
+.search_filter_header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 0 40px;
+  height: 100px;
+}
+
+.filter_mask_content .search_filter_header .cate_header_back {
+  margin-left: 44px;
+  width: 30px;
+  height: 30px;
+  border-right: 2px solid #676767;
+  border-bottom: 2px solid #676767;
+  transform: rotate(-225deg);
+  display: inline-block;
+}
+
+.filter_mask_content .search_filter_header .cate_header_title {
+  font-size: 28px;
+  color: #232321;
+  font-weight: 600;
+  flex: 1;
+  text-align: center;
+  padding-right: 40px;
+}
+
+.filter_mask_content .filter_main_box {
+  border-top: 1px solid #eee;
+}
+
+.filter_options {
+  width: 100%;
+  //border-bottom: 1px solid #ddd;
+  padding: 20px 40px 40px;
+}
+
+.filter_options_title {
+  position: relative;
+  text-align: left;
+  height: 78px;
+  line-height: 78px;
+}
+
+.options_title_text {
+  font-size: 28px;
+  font-weight: bold;
+  color: #232321;
+}
+
+.filter_mask_content .filter_main_box .filter_options_content::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.filter_mask_content .filter_main_box .filter_options .activity {
+  width: 100%;
+}
+
+.filter_mask_content .filter_main_box .filter_options .activity_item {
+  width: 182px;
+  height: 54px;
+  line-height: 54px;
+  display: block;
+  float: left;
+  text-align: center;
+  color: #232321;
+  background: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 28px;
+  border: 1px solid #ddd;
+  margin: 20px 16px 0 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+.filter_mask_content .filter_main_box .filter_options .activity .active {
+  background: #232321;
+  color: #fff;
+  border-color: #232321;
+}
+
+.filter_mask_content .filter_main_box .filter_options .options_content_price {
+  width: 100%;
+  color: #232321;
+}
+
+.filter_mask_content .filter_main_box .filter_options .options_content_price .price_input {
+  width: 250px;
+  height: 52px;
+  line-height: 52px;
+  background: #f7f7f7;
+  border: 1px solid #dad9d9;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 24px;
+  color: #232321;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.filter_mask_content .filter_main_box .filter_options .options_content_price .options_text {
+  height: 52px;
+  line-height: 52px;
+  font-size: 24px;
+  display: inline-block;
+  color: #232321;
+  margin: 0 20px;
+  vertical-align: middle;
+}
+
+.filter_mask_content .filter_confirm {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #232321;
+}
+
+.filter_mask_content .filter_confirm .item_btn {
+  flex: 1;
+  font-size: 32px;
+  color: #fff;
+  height: 100px;
+  line-height: 100px;
+  padding: 0;
+  border-radius: 0;
+}
+
+.filter_mask_content .filter_confirm .reset_filter {
+  background-color: #232321;
+}
+
+.filter_mask_content .filter_confirm .filter_confirm_btn {
+  background-color: #111110;
+}
+
+.filter_mask .search_animation {
+  width: 680px;
+}
+
+.search_not_see {
+  display: none;
+}
+
+.search_not_see_ani {
+  opacity: 0;
+}

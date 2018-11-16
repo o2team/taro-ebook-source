@@ -1,0 +1,66 @@
+/*postcss-pxtransform rn eject enable*/
+
+.toplife_modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0,0,0,.8);
+  z-index: 100;
+  &_content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 600px;
+    height: 320px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    color: #232321;
+    text-align: center;
+    border-radius: 30px;
+  }
+  &_title {
+    margin-top: 40px;
+    font-size: 32px;
+  }
+  &_text{
+    margin-top: 40px;
+    font-size: 24px;
+  }
+  &_btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 88px;
+    border-top: 2px solid #eee;
+    &_cancel {
+      color: #8c8c8c;
+      border-radius: 0;
+      border: 0;
+      border-right: 2px solid #eee;
+      border-bottom-left-radius: 30px;
+    }
+    &_confirm {
+      color: #666;
+      border-radius: 0;
+      border: 0;
+      border-bottom-right-radius: 30px;
+    }
+    button {
+      display: block;
+      float: left;
+      width: 50%;
+      height: 88px;
+      text-align: center;
+      line-height: 88px;
+      font-size: 32px;
+      box-sizing: border-box;
+      background-color: #fff;
+      &::after {
+        border: 0;
+      }
+    }
+  }
+}
