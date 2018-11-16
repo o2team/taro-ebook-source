@@ -69,7 +69,7 @@ class Shop extends Component {
   }
 
   // 显示more
-  toggleShowMore () {
+  toggleShowMore = () => {
     this.setState({showMore: !this.state.showMore})
   }
 
@@ -89,13 +89,15 @@ class Shop extends Component {
       this.setState({
         showMore: false
       })
-      Taro.switchTab({
-        url: '../index/index'
-      })
+      if (process.env.TARO_ENV === 'weapp') {
+        Taro.switchTab({
+          url: '/pages/index/index'
+        })
+      } else {
+        jumpUrl('/pages/index/index')
+      }
     } else if (pages === 'cart') {
-      Taro.switchTab({
-        url: '../cart/cart'
-      })
+      jumpUrl('/pages/cart/cart_sub')
     }
   }
 

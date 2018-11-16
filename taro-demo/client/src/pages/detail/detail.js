@@ -1,7 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import { Swiper, SwiperItem, View, Text, Button, Image, ScrollView, Label } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
-import { gotoPage, jumpUrl, getSystemInfo } from '../../utils/util'
+import { jumpUrl, getSystemInfo } from '../../utils/util'
 import { fetchAddCart, fetchSkuData, fetchCart } from '../../actions/detail'
 import bagImage from './bag.png'
 
@@ -154,7 +154,13 @@ class Detail extends Component {
   }
 
   gotoIndex () {
-    gotoPage('index')
+    if (process.env.TARO_ENV === 'weapp') {
+      Taro.switchTab({
+        url: '/pages/index/index'
+      })
+    } else {
+      jumpUrl('/pages/index/index')
+    }
   }
 
   toShop = (e) => {
