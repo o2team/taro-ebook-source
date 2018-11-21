@@ -82,6 +82,15 @@ function getH5UniqueId () {
           } else {
             resolve(data)
           }
+        },
+        fail() {
+          const h5Id = `user_${Math.random().toString(36).substr(2)}`
+          Taro.setStorage({ key: 'Taro_h5_demo_uid', data: h5Id })
+          const addUser = require('../leancloud/user/addUser').addUser
+          addUser(h5Id).then((res) => {
+            Taro.setStorage({ key: 'Taro_h5_demo_objectId', data: res.id })
+            resolve(h5Id)
+          }).catch(reject)
         }
       })
     })

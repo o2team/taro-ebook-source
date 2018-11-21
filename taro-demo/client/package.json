@@ -44,6 +44,7 @@
 		"@tarojs/rn-runner": "1.1.8",
 		"@tarojs/router": "1.1.8",
 		"@tarojs/taro": "1.1.8",
+		"@tarojs/taro-alipay": "^1.1.8",
 		"@tarojs/taro-h5": "1.1.8",
 		"@tarojs/taro-weapp": "1.1.8",
 		"classnames": "^2.2.5",

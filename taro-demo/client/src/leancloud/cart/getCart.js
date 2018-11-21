@@ -23,3 +23,5 @@ export async function getCart (h5Id) {
   }
   return { result: { data: cartData } } 
 }
+
+export default getCart

@@ -20,7 +20,7 @@ export function fetchIndexList () {
             func: 'getInformation'
           }
         })
-      } else if (process.env.TARO_ENV === 'h5' || 'rn') {
+      } else {
         const getInformation = require('../leancloud/shop/getInformation').getInformation
         res = await getInformation()
       }

@@ -44,7 +44,7 @@ class CartSub extends Component {
     })
   }
 
-  onViewScroll (e) {
+  onViewScroll = (e) => {
     this.pageScrollFn && this.pageScrollFn(e.detail.scrollTop)
   }
 
