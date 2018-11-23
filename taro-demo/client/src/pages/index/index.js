@@ -74,6 +74,7 @@ class Index extends Component {
     this.setState({
       showAuthModal: false
     })
+    getIsAuth()
   }
 
   async onPullDownRefresh () {
@@ -110,9 +111,20 @@ class Index extends Component {
               showAuthModal
             })
             getIsAuth()
+          },
+          fail: () => {
+            let showAuthModal
+            if (!userData && !this.state.showAuthModal) {
+              showAuthModal = true
+            } else {
+              showAuthModal = false
+            }
+            this.setState({
+              animationClass: 'animation',
+              showAuthModal
+            })
           }
         })
-
       }, 1000)
     } else if (this.env === 'h5' || 'rn') {
       getH5UniqueId()
