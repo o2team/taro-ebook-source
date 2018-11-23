@@ -126,7 +126,7 @@ class Index extends Component {
           }
         })
       }, 1000)
-    } else if (this.env === 'h5' || 'rn') {
+    } else if (this.env === 'h5' || this.env === 'rn') {
       getH5UniqueId()
     }
   }
