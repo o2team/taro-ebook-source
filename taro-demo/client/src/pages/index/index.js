@@ -110,7 +110,6 @@ class Index extends Component {
               animationClass: 'animation',
               showAuthModal
             })
-            getIsAuth()
           },
           fail: () => {
             let showAuthModal
@@ -126,6 +125,7 @@ class Index extends Component {
           }
         })
       }, 1000)
+      getIsAuth()
     } else if (this.env === 'h5' || 'rn') {
       getH5UniqueId()
     }
