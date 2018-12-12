@@ -66,7 +66,7 @@ class Index extends Component {
     Taro.setStorage({key: 'isHomeLongHideAuthModal', data: true})
   }
 
-  prcoessAuthResult (userData) {
+  processAuthResult (userData) {
     Taro.setStorage({key: 'isHomeLongHideAuthModal', data: true})
     if (userData.userInfo) {
       setGlobalData('userData', userData)
@@ -168,7 +168,7 @@ class Index extends Component {
           title='授权提示'
           contentText='TARO商城请求获取授权信息，以便记录您的订单'
           onCancelCallback={this.hideAuthModal.bind(this)}
-          onConfirmCallback={this.prcoessAuthResult.bind(this)}
+          onConfirmCallback={this.processAuthResult.bind(this)}
           isAuth={true}
         />
         }

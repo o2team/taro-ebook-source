@@ -130,7 +130,7 @@ class Balance extends Component {
     })
   }
 
-  onPrcoessAuthResult = userData => {
+  onProcessAuthResult = userData => {
     this.setState({
       isShowUserAuthModal: false
     })
@@ -254,7 +254,7 @@ class Balance extends Component {
               title='授权提示'
               contentText='TARO商城请求获取授权信息，以便记录您的订单'
               cancelCallback={this.onHideUserAuthModal.bind(this)}
-              confirmCallback={this.onPrcoessAuthResult.bind(this)}
+              confirmCallback={this.onProcessAuthResult.bind(this)}
               isAuth
             />
           }
