@@ -66,7 +66,7 @@ class Index extends Component {
     Taro.setStorage({key: 'isHomeLongHideAuthModal', data: true})
   }
 
-  prcoessAuthResult (userData) {
+  processAuthResult (userData) {
     Taro.setStorage({key: 'isHomeLongHideAuthModal', data: true})
     if (userData.userInfo) {
       setGlobalData('userData', userData)
@@ -110,7 +110,6 @@ class Index extends Component {
               animationClass: 'animation',
               showAuthModal
             })
-            getIsAuth()
           },
           fail: () => {
             let showAuthModal
@@ -126,6 +125,7 @@ class Index extends Component {
           }
         })
       }, 1000)
+      getIsAuth()
     } else if (this.env === 'h5' || this.env === 'rn') {
       getH5UniqueId()
     }
@@ -168,7 +168,7 @@ class Index extends Component {
           title='授权提示'
           contentText='TARO商城请求获取授权信息，以便记录您的订单'
           onCancelCallback={this.hideAuthModal.bind(this)}
-          onConfirmCallback={this.prcoessAuthResult.bind(this)}
+          onConfirmCallback={this.processAuthResult.bind(this)}
           isAuth={true}
         />
         }

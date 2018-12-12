@@ -76,7 +76,7 @@ class OrderList extends Component {
     })
   }
 
-  onPrcoessAuthResult = userData => {
+  onProcessAuthResult = userData => {
     this.setState({
       isShowUserAuthModal: false
     })
@@ -220,7 +220,7 @@ class OrderList extends Component {
             title='授权提示'
             contentText='TOPLIFE请求获取授权信息，以便记录您的订单'
             onCancelCallback={this.onHideUserAuthModal.bind(this)}
-            onConfirmCallback={this.onPrcoessAuthResult.bind(this)}
+            onConfirmCallback={this.onProcessAuthResult.bind(this)}
             isAuth
           />
         }
