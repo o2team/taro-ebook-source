@@ -136,9 +136,8 @@ class Shop extends Component {
             autoplay
           >
             {
-              banner.map((item, index) => {
-                console.log(item)
-                return <SwiperItem key={index}>
+              banner.map((item) => {
+                return <SwiperItem>
                   <Image src={item} mode='widthFix' className='shop_main_swiper_item_image' />
                 </SwiperItem>
               })}

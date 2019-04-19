@@ -15,20 +15,27 @@ async function getUserInfo () {
   } catch (err) {
     console.log(err)
     console.log('微信登录或用户接口故障')
-    return null
+    return {}
   }
 }
 
 async function getOpenId () {
-  const openId = Taro.getStorageSync('taro_demo_openid')
+  let openId
+  try {
+    openId = Taro.getStorageSync('taro_demo_openid')
+  } catch (error) {
+    console.log(error)
+  }
   if (openId) {
     return openId
   } else {
-    const loginRes = await Taro.login()
-    const res = await Taro.request({
-      url: `https://api.weixin.qq.com/sns/jscode2session?appid=${appid}&secret=${secret}&js_code=${loginRes.code}&grant_type=authorization_code`
+    const res = await Taro.cloud.callFunction({
+      name: 'user',
+      data: {
+        func: 'getOpenId'
+      }
     })
-    const openId = res.data.openid
+    const openId = res.result.data.openId
     Taro.setStorage({key: 'taro_demo_openid', data: openId})
     return openId
   }
@@ -55,10 +62,10 @@ async function getIsAuth () {
       data: userInfo
     },
     success: (res) => {
-      console.log(res)
+      // console.log(res)
     },
     fail: (res) => {
-      console.log(res)
+      // console.log(res)
     }
   })
 

@@ -1,0 +1,248 @@
+{
+  "_id": "1",
+  "desc": [{
+    "name": "商品描述",
+    "image": "//img30.360buyimg.com/jgsq-productsoa/jfs/t14749/340/2355158754/76418/b93a30b9/5a991e02Nd53a1731.jpg"
+  }, {
+    "name": "尺寸说明",
+    "image": "//img30.360buyimg.com/jgsq-productsoa/jfs/t14977/135/2361657259/41330/d91b6b25/5a991e0fN210886a6.jpg"
+  }],
+  "images": [
+    "//img13.360buyimg.com/babel/s750x750_jfs/t23872/172/1976411083/111381/8ca7bb56/5b713511N03738f0c.jpg",
+    "//img10.360buyimg.com/babel/s750x750_jfs/t25714/354/469586123/141400/3c581fbe/5b713511Na3755833.jpg",
+    "//img11.360buyimg.com/babel/s750x750_jfs/t24226/159/2068314893/116036/f53a8e55/5b713512N73f32551.jpg"
+  ],
+  "price": "120.00",
+  "skuName": "测试商品1",
+  "venderId": {
+    "$numberLong": "1"
+  },
+  "skuId": {
+    "$numberLong": "1"
+  },
+  "colorInfo": {
+    "name": "颜色分类",
+    "value": "黑色",
+    "all": ["黑色", "白色", "黄色", "绿色"]
+  },
+  "sizeInfo": {
+    "value": "M",
+    "all": ["S", "M", "L", "XL"],
+    "name": "尺寸"
+  },
+  "_openid": "oFQSH5MekinNSc_yqH9dNlmKh6vI",
+  "name": "描述当前的商品",
+  "stockState": {
+    "$numberLong": "111"
+  },
+  "imageUrl": "//img13.360buyimg.com/babel/s750x750_jfs/t23872/172/1976411083/111381/8ca7bb56/5b713511N03738f0c.jpg"
+} {
+  "_id": "2",
+  "desc": [{
+    "name": "商品描述",
+    "image": "//img30.360buyimg.com/jgsq-productsoa/jfs/t14749/340/2355158754/76418/b93a30b9/5a991e02Nd53a1731.jpg"
+  }, {
+    "image": "//img30.360buyimg.com/jgsq-productsoa/jfs/t14977/135/2361657259/41330/d91b6b25/5a991e0fN210886a6.jpg",
+    "name": "尺寸说明"
+  }],
+  "price": "10.00",
+  "skuId": {
+    "$numberLong": "2"
+  },
+  "images": [
+    "//img14.360buyimg.com/babel/s750x750_jfs/t1/11043/29/10760/82352/5c822707E93705ee8/6b4f8a2ff72feb47.jpg",
+    "//img11.360buyimg.com/babel/s750x750_jfs/t1/27067/20/9803/65556/5c8107edE7e4a5bdc/622d6174b057e543.jpg",
+    "//img12.360buyimg.com/babel/s750x750_jfs/t1/15028/23/9879/62556/5c8107eeEc05e9990/d762be4402812b7f.jpg"
+  ],
+  "skuName": "测试商品2",
+  "venderId": {
+    "$numberLong": "1"
+  },
+  "colorInfo": {
+    "name": "颜色分类",
+    "value": "绿色",
+    "all": ["黑色", "白色", "黄色", "绿色"]
+  },
+  "sizeInfo": {
+    "value": "L",
+    "all": ["S", "M", "L", "XL"],
+    "name": "尺寸"
+  },
+  "_openid": "oFQSH5MekinNSc_yqH9dNlmKh6vI"
+} {
+  "_id": "3",
+  "desc": [{
+    "name": "商品描述",
+    "image": "//img30.360buyimg.com/jgsq-productsoa/jfs/t14749/340/2355158754/76418/b93a30b9/5a991e02Nd53a1731.jpg"
+  }, {
+    "name": "尺寸说明",
+    "image": "//img30.360buyimg.com/jgsq-productsoa/jfs/t14977/135/2361657259/41330/d91b6b25/5a991e0fN210886a6.jpg"
+  }],
+  "colorInfo": {
+    "name": "颜色分类",
+    "value": "绿色",
+    "all": ["黑色", "白色", "黄色", "绿色"]
+  },
+  "images": [
+    "//img14.360buyimg.com/babel/s750x750_jfs/t1/8292/37/1331/110599/5bcdb98bE53f25424/b57fe4d43a8d06c0.jpg",
+    "//img13.360buyimg.com/babel/s750x750_jfs/t1/7753/13/1333/98302/5bcdb98dEbe775f49/0c5b7e13e9afd08a.jpg",
+    "//img13.360buyimg.com/babel/s750x750_jfs/t1/956/20/11404/115963/5bcdb98eE1431b793/060f1812c05f7120.jpg"
+  ],
+  "price": "36.00",
+  "skuId": {
+    "$numberLong": "3"
+  },
+  "skuName": "测试商品3",
+  "venderId": {
+    "$numberLong": "2"
+  },
+  "sizeInfo": {
+    "name": "尺寸",
+    "value": "S",
+    "all": ["S", "M", "L", "XL"]
+  },
+  "_openid": "oFQSH5MekinNSc_yqH9dNlmKh6vI",
+  "stockState": {
+    "$numberLong": "111"
+  },
+  "name": "测试商品3测试商品3测试商品3"
+} {
+  "_id": "4",
+  "skuId": {
+    "$numberLong": "4"
+  },
+  "skuName": "测试商品4",
+  "colorInfo": {
+    "name": "颜色分类",
+    "value": "黄色",
+    "all": ["黑色", "白色", "黄色", "绿色"]
+  },
+  "desc": [{
+    "name": "商品描述",
+    "image": "//img30.360buyimg.com/jgsq-productsoa/jfs/t14749/340/2355158754/76418/b93a30b9/5a991e02Nd53a1731.jpg"
+  }, {
+    "name": "尺寸说明",
+    "image": "//img30.360buyimg.com/jgsq-productsoa/jfs/t14977/135/2361657259/41330/d91b6b25/5a991e0fN210886a6.jpg"
+  }],
+  "images": [
+    "//img12.360buyimg.com/babel/s750x750_jfs/t1/9881/35/14791/67330/5c6a6940E195cc828/509198928a9a6551.jpg",
+    "//img13.360buyimg.com/babel/s750x750_jfs/t1/16208/30/7422/48697/5c6a6941E6a21e8f7/b9e3972d610a8240.jpg"
+  ],
+  "price": "1200.00",
+  "venderId": {
+    "$numberLong": "4"
+  },
+  "sizeInfo": {
+    "name": "尺寸",
+    "value": "M",
+    "all": ["S", "M", "L", "XL"]
+  },
+  "_openid": "oFQSH5MekinNSc_yqH9dNlmKh6vI",
+  "name": "花辰月夕系列手镯",
+  "imageUrl": "//img12.360buyimg.com/babel/s750x750_jfs/t1/9881/35/14791/67330/5c6a6940E195cc828/509198928a9a6551.jpg"
+} {
+  "_id": "5",
+  "venderId": {
+    "$numberLong": "3"
+  },
+  "skuName": "测试商品5",
+  "colorInfo": {
+    "all": ["黑色", "白色", "黄色", "绿色"],
+    "name": "颜色分类",
+    "value": "黑色"
+  },
+  "sizeInfo": {
+    "name": "尺寸",
+    "value": "XL",
+    "all": ["S", "M", "L", "XL"]
+  },
+  "desc": [{
+    "name": "商品描述",
+    "image": "//img30.360buyimg.com/jgsq-productsoa/jfs/t14749/340/2355158754/76418/b93a30b9/5a991e02Nd53a1731.jpg"
+  }, {
+    "image": "//img30.360buyimg.com/jgsq-productsoa/jfs/t14977/135/2361657259/41330/d91b6b25/5a991e0fN210886a6.jpg",
+    "name": "尺寸说明"
+  }],
+  "images": [
+    "//img11.360buyimg.com/babel/s750x750_jfs/t1/10234/32/13488/16626/5c810c73E6b19ea00/c31e3848ac38a594.jpg",
+    "//img13.360buyimg.com/babel/s750x750_jfs/t1/27956/22/9682/37096/5c810c73E090b67d8/12bbd638b9c6c2f6.jpg",
+    "//img11.360buyimg.com/babel/s750x750_jfs/t1/18654/15/9713/34640/5c810c74E67ba5717/4894bd6ece65a003.jpg"
+  ],
+  "price": "850.00",
+  "skuId": {
+    "$numberLong": "5"
+  },
+  "_openid": "oFQSH5MekinNSc_yqH9dNlmKh6vI",
+  "name": "测试商品5测试商品5测试商品5",
+  "imageUrl": "img10.360buyimg.com/n8/s310x390_jfs/t19057/352/345862030/116670/dfb12b18/5a6ebca8Nd2e72e52.jpg"
+} {
+  "_id": "6",
+  "images": [
+    "//img14.360buyimg.com/babel/s750x750_jfs/t1/16284/1/7356/41624/5c6a492dE9453cbda/a7495000ac717ea2.jpg",
+    "//img11.360buyimg.com/babel/s750x750_jfs/t1/29347/5/7294/188403/5c6a492dE50113494/4c4cd76255c99db2.jpg",
+    "//img11.360buyimg.com/babel/s750x750_jfs/t1/7181/29/14993/39041/5c6a492dE8d210b77/27cdd6b48c51cfe8.jpg"
+  ],
+  "price": "250.00",
+  "skuName": "测试商品6",
+  "venderId": {
+    "$numberLong": "4"
+  },
+  "colorInfo": {
+    "name": "颜色分类",
+    "value": "黄色",
+    "all": ["黑色", "白色", "黄色", "绿色"]
+  },
+  "sizeInfo": {
+    "name": "尺寸",
+    "value": "XL",
+    "all": ["S", "M", "L", "XL"]
+  },
+  "desc": [{
+    "name": "商品描述",
+    "image": "//img30.360buyimg.com/jgsq-productsoa/jfs/t14749/340/2355158754/76418/b93a30b9/5a991e02Nd53a1731.jpg"
+  }, {
+    "name": "尺寸说明",
+    "image": "//img30.360buyimg.com/jgsq-productsoa/jfs/t14977/135/2361657259/41330/d91b6b25/5a991e0fN210886a6.jpg"
+  }],
+  "skuId": {
+    "$numberLong": "6"
+  },
+  "_openid": "oFQSH5MekinNSc_yqH9dNlmKh6vI",
+  "name": "测试商品6测试商品6测试商品6测试商品6测试商品6测试商品6测试商品6",
+  "imageUrl": "//img14.360buyimg.com/babel/s750x750_jfs/t1/16284/1/7356/41624/5c6a492dE9453cbda/a7495000ac717ea2.jpg"
+} {
+  "_id": "7",
+  "price": "5.00",
+  "skuId": {
+    "$numberLong": "7"
+  },
+  "venderId": {
+    "$numberLong": "3"
+  },
+  "colorInfo": {
+    "name": "颜色分类",
+    "value": "白色",
+    "all": ["黑色", "白色", "黄色", "绿色"]
+  },
+  "sizeInfo": {
+    "name": "尺寸",
+    "value": "M",
+    "all": ["S", "M", "L", "XL"]
+  },
+  "desc": [{
+    "name": "商品描述",
+    "image": "//img30.360buyimg.com/jgsq-productsoa/jfs/t14749/340/2355158754/76418/b93a30b9/5a991e02Nd53a1731.jpg"
+  }, {
+    "image": "//img30.360buyimg.com/jgsq-productsoa/jfs/t14977/135/2361657259/41330/d91b6b25/5a991e0fN210886a6.jpg",
+    "name": "尺寸说明"
+  }],
+  "skuName": "测试商品7",
+  "images": [
+    "//img14.360buyimg.com/babel/s750x750_jfs/t1/21272/33/7190/31365/5c6a7e1fE55f3fa69/db66cc785e41d48f.jpg",
+    "//img14.360buyimg.com/babel/s750x750_jfs/t1/7300/24/15056/117640/5c6a7e1fEc60e72f4/8f9edb10967aeb31.jpg",
+    "//img11.360buyimg.com/babel/s750x750_jfs/t1/32994/11/2527/31419/5c6a7e1fE4eda4c41/f43bd3a9ccd9ea12.jpg"
+  ],
+  "_openid": "oFQSH5MekinNSc_yqH9dNlmKh6vI",
+  "name": "测试商品7测试商品7测试商品7",
+  "imageUrl": "//img14.360buyimg.com/babel/s750x750_jfs/t1/21272/33/7190/31365/5c6a7e1fE55f3fa69/db66cc785e41d48f.jpg"
+}

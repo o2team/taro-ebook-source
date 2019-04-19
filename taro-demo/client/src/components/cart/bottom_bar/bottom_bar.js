@@ -28,7 +28,6 @@ class BottomBar extends Component {
   }
 
   checkAllCart = () => {
-    console.log('checkAllCart')
     const {
       isEditStatus,
       commoditys,
@@ -128,7 +127,6 @@ class BottomBar extends Component {
 
     const {showConfirm, delNum} = this.state
     const hasDelCart = this.booleanDelCart()
-
     const bottomClass = classnames('bottom_bar_wp', {'hide': !hasCommodity && !isLogin})
     return (
       <View className={bottomClass} style={isSub ? 'margin-bottom: 0' : ''}>
@@ -191,8 +189,8 @@ class BottomBar extends Component {
 }
 
 export default connect(({
-                          cart
-                        }) => ({
+  cart
+}) => ({
   commoditys: cart.commoditys,
   checkAll: cart.checkAll,
   checkDelAll: cart.checkDelAll,

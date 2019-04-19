@@ -1,4 +1,4 @@
-const app = require('tcb-admin-node')
+const app = require('wx-server-sdk')
 
 const { getInformation } = require('./getInformation.js')
 const { getShop } = require('./getShop.js')

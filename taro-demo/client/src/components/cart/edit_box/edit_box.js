@@ -53,7 +53,6 @@ class EditBox extends Component {
 
     this.runCloseAni()
     if (showColorValue || showSizeValue) {
-      console.log(newSku)
       onFetchChangeAttr(newSku)
     }
   }
@@ -62,7 +61,7 @@ class EditBox extends Component {
     const {isClose, showColorValue, showSizeValue} = this.state
     const {editSkuData} = this.props
     const {showEidtBox, sku} = editSkuData
-    const {colorInfo, sizeInfo} = sku
+    const {colorInfo, sizeInfo} = sku || {}
 
     const colorValue = showColorValue || colorInfo.value
     const sizeValue = showSizeValue || sizeInfo.value
@@ -114,8 +113,8 @@ class EditBox extends Component {
 }
 
 export default connect(({
-                          cart
-                        }) => ({
+  cart
+}) => ({
   editSkuData: cart.editSkuData
 }), (dispatch) => ({
   hideEditBox (...args) {

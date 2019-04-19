@@ -63,6 +63,7 @@ page {
 
 .cart-scroll {
   flex-grow: 1;
+  -webkit-overflow-scrolling: touch;
 }
 
 .cart.no_bottom {

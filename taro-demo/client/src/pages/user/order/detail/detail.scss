@@ -74,6 +74,7 @@
 .order_detail-scroll {
   display: flex;
   flex-grow: 1;
+  -webkit-overflow-scrolling: touch;
 }
 
 .user_detail {
@@ -317,9 +318,12 @@
   border-width: 0 0 2px 0;
   border-bottom-color: #dddddd;
   border-style: solid;
+  width: 100%;
+  overflow: scroll;
 }
 
 .detail_goods_item {
+  flex: 0 0 630px;
   display: flex;
   flex-direction: row;
   margin-bottom: 40px;

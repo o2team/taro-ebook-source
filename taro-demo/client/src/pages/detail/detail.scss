@@ -413,6 +413,7 @@ page {
 .detail-scroll-view {
   //flex: 1;
   flex-grow: 1;
+  -webkit-overflow-scrolling: touch;
 }
 
 .detail_swiper_wrap {
@@ -701,6 +702,7 @@ page {
   left: 54px;
   padding: 0 10px;
   height: 32px;
+  line-height: 32px;
   border-radius: 32px;
   background: #df5e58;
 }
@@ -709,6 +711,7 @@ page {
   font-size: 24px;
   color: #fff;
   text-align: center;
+  vertical-align: text-top;
 }
 
 .dlayer_btn_addcart {

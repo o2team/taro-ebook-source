@@ -74,7 +74,7 @@ export function fetchSkuData (skuId) {
         res = await getSku(skuId)
       }
       if (res.result) {
-        let skuData = res.result.data[0]
+        let skuData = res.result.data
         dispatch(aMap[RECEIVE_DETAIL_SKU](skuData))
       } else {
         Taro.redirectTo({url: '/pages/404/404'})
@@ -119,6 +119,9 @@ export function fetchAddCart (skus) {
     const data = res.result.data
     if (data.length !== 0) {
       dispatch(aMap[RECEIVE_DETAIL_ADD_CART](data))
+      Taro.showToast({
+        title: '添加购物车成功'
+      })
     } else {
       dispatch(aMap[RECEIVE_DETAIL_CART](getState().detail))
       data.code !== 3 && Taro.showToast({

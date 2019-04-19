@@ -14,7 +14,7 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.2.3",
+	"libVersion": "2.6.2",
 	"appid": "wx9504f077bdc24ea2",
 	"projectname": "%E6%8E%98%E9%87%91%E5%B0%8F%E5%86%8Cdemo",
 	"isGameTourist": false,
@@ -80,13 +80,15 @@
 					"id": 6,
 					"name": "order",
 					"pathName": "pages/user/order/list/list",
-					"query": ""
+					"query": "",
+					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 7,
 					"name": "orderDetail",
 					"pathName": "pages/user/order/detail/detail",
-					"query": "orderId=bw15krfzoiu"
+					"query": "orderId=o6zt3qslcj&__key_=15535015457221",
+					"scene": null
 				}
 			]
 		}

@@ -1,4 +1,4 @@
-const app = require('tcb-admin-node')
+const app = require('wx-server-sdk')
 
 const { getList } = require('./getList.js')
 

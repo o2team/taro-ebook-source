@@ -1,0 +1,163 @@
+{
+  "_id": "1",
+  "floors": [{
+    "commodities": [{
+      "$numberLong": "1"
+    }, {
+      "$numberLong": "2"
+    }, {
+      "$numberLong": "3"
+    }, {
+      "$numberLong": "4"
+    }],
+    "desc": "//img13.360buyimg.com/tuangou/s750x270_jfs/t1/21795/39/4888/157003/5c35bd02Ee0be10fc/e510c1344cab2f54.jpg",
+    "title": "//img12.360buyimg.com/tuangou/s750x170_jfs/t15316/209/1136705664/8030/71099545/5a4626ebN8fea2205.png"
+  }, {
+    "commodities": [{
+      "$numberLong": "1"
+    }, {
+      "$numberLong": "3"
+    }, {
+      "$numberLong": "4"
+    }, {
+      "$numberLong": "5"
+    }],
+    "desc": "//img14.360buyimg.com/tuangou/s750x270_jfs/t1/18169/24/4734/158756/5c35bd17E6d82315f/2afcf1d86d04f088.jpg",
+    "title": "//img10.360buyimg.com/tuangou/s750x170_jfs/t15328/270/809894122/7669/cc12bee5/5a38bbd7Nd9f338f0.png"
+  }],
+  "thumbnail": "//img10.360buyimg.com/popshop/s190x80_jfs/t16390/270/1887231446/24253/18756a28/5a72d454N18b1efc6.jpg",
+  "title": "店铺1",
+  "venderId": {
+    "$numberLong": "1"
+  },
+  "banner": [
+    "//img14.360buyimg.com/tuangou/s750x1113_jfs/t21541/355/1756916231/176086/36aafe7/5b32fb17N94ddb733.jpg",
+    "https://img13.360buyimg.com/tuangou/jfs/t18355/143/2539284735/191923/ba823db9/5afa8aa9N5c2fef05.jpg",
+    "//img13.360buyimg.com/tuangou/s750x1113_jfs/t22891/27/503122428/190720/56a02c3a/5b32fb2eN2f8ddd50.jpg",
+    "https://img13.360buyimg.com/tuangou/jfs/t21238/78/83048933/181565/4eed0ae6/5afa8ab2Na1ebd25b.jpg"
+  ],
+  "desc": "店铺1页面",
+  "_openid": "oFQSH5MekinNSc_yqH9dNlmKh6vI"
+} {
+  "_id": "2",
+  "desc": "店铺2页面",
+  "floors": [{
+    "desc": "//img13.360buyimg.com/tuangou/s750x270_jfs/t1/21795/39/4888/157003/5c35bd02Ee0be10fc/e510c1344cab2f54.jpg",
+    "title": "//img12.360buyimg.com/tuangou/s750x170_jfs/t15316/209/1136705664/8030/71099545/5a4626ebN8fea2205.png",
+    "commodities": [{
+      "$numberLong": "3"
+    }, {
+      "$numberLong": "1"
+    }, {
+      "$numberLong": "2"
+    }, {
+      "$numberLong": "5"
+    }]
+  }, {
+    "commodities": [{
+      "$numberLong": "1"
+    }, {
+      "$numberLong": "3"
+    }, {
+      "$numberLong": "2"
+    }, {
+      "$numberLong": "7"
+    }],
+    "desc": "//img14.360buyimg.com/tuangou/s750x270_jfs/t1/18169/24/4734/158756/5c35bd17E6d82315f/2afcf1d86d04f088.jpg",
+    "title": "//img10.360buyimg.com/tuangou/s750x170_jfs/t15328/270/809894122/7669/cc12bee5/5a38bbd7Nd9f338f0.png"
+  }],
+  "thumbnail": "//img10.360buyimg.com/popshop/s190x80_jfs/t17935/53/2369573223/24376/e2dd64/5af1b116N558ae2db.jpg",
+  "title": "店铺2",
+  "venderId": {
+    "$numberLong": "2"
+  },
+  "banner": [
+    "//img14.360buyimg.com/tuangou/s750x1113_jfs/t20533/231/1709805739/178688/37ab92d5/5b32fb07N330047ee.jpg",
+    "https://img13.360buyimg.com/tuangou/jfs/t21238/78/83048933/181565/4eed0ae6/5afa8ab2Na1ebd25b.jpg",
+    "//img14.360buyimg.com/tuangou/s750x1113_jfs/t1/17835/33/6503/180582/5c52b175E9299d365/6d6f6cbc5bcffb1f.jpg",
+    "//img14.360buyimg.com/tuangou/s750x1113_jfs/t21541/355/1756916231/176086/36aafe7/5b32fb17N94ddb733.jpg"
+  ],
+  "_openid": "oFQSH5MekinNSc_yqH9dNlmKh6vI"
+}
+
+{
+  "_id": "3",
+  "desc": "店铺3页面",
+  "floors": [{
+    "commodities": [{
+      "$numberLong": "2"
+    }, {
+      "$numberLong": "3"
+    }, {
+      "$numberLong": "6"
+    }, {
+      "$numberLong": "4"
+    }],
+    "desc": "//img14.360buyimg.com/tuangou/s750x270_jfs/t1/18169/24/4734/158756/5c35bd17E6d82315f/2afcf1d86d04f088.jpg",
+    "title": "//img12.360buyimg.com/tuangou/s750x170_jfs/t15316/209/1136705664/8030/71099545/5a4626ebN8fea2205.png"
+  }, {
+    "title": "//img10.360buyimg.com/tuangou/s750x170_jfs/t15328/270/809894122/7669/cc12bee5/5a38bbd7Nd9f338f0.png",
+    "commodities": [{
+      "$numberLong": "1"
+    }, {
+      "$numberLong": "5"
+    }, {
+      "$numberLong": "3"
+    }, {
+      "$numberLong": "6"
+    }],
+    "desc": "//img13.360buyimg.com/tuangou/s750x270_jfs/t1/21795/39/4888/157003/5c35bd02Ee0be10fc/e510c1344cab2f54.jpg"
+  }],
+  "thumbnail": "//img12.360buyimg.com/n1/s190x80_jfs/t22429/300/1109626640/5017/d77c7252/5b50350aNb53dba6c.png",
+  "title": "店铺3",
+  "venderId": {
+    "$numberLong": "3"
+  },
+  "banner": [
+    "//img13.360buyimg.com/tuangou/s750x1113_jfs/t22891/27/503122428/190720/56a02c3a/5b32fb2eN2f8ddd50.jpg",
+    "https://img13.360buyimg.com/tuangou/jfs/t21238/78/83048933/181565/4eed0ae6/5afa8ab2Na1ebd25b.jpg",
+    "//img14.360buyimg.com/tuangou/s750x1113_jfs/t1/17835/33/6503/180582/5c52b175E9299d365/6d6f6cbc5bcffb1f.jpg",
+    "//img14.360buyimg.com/tuangou/s750x1113_jfs/t20533/231/1709805739/178688/37ab92d5/5b32fb07N330047ee.jpg"
+  ],
+  "_openid": "oFQSH5MekinNSc_yqH9dNlmKh6vI"
+} {
+  "_id": "4",
+  "venderId": {
+    "$numberLong": "4"
+  },
+  "banner": [
+    "//img14.360buyimg.com/tuangou/s750x1113_jfs/t1/17835/33/6503/180582/5c52b175E9299d365/6d6f6cbc5bcffb1f.jpg",
+    "https://img13.360buyimg.com/tuangou/jfs/t21238/78/83048933/181565/4eed0ae6/5afa8ab2Na1ebd25b.jpg",
+    "//img13.360buyimg.com/tuangou/s750x1113_jfs/t22891/27/503122428/190720/56a02c3a/5b32fb2eN2f8ddd50.jpg",
+    "//img14.360buyimg.com/tuangou/s750x1113_jfs/t21541/355/1756916231/176086/36aafe7/5b32fb17N94ddb733.jpg"
+  ],
+  "desc": "店铺4页面",
+  "floors": [{
+    "commodities": [{
+      "$numberLong": "4"
+    }, {
+      "$numberLong": "6"
+    }, {
+      "$numberLong": "1"
+    }, {
+      "$numberLong": "2"
+    }],
+    "desc": "//img13.360buyimg.com/tuangou/s750x270_jfs/t1/21795/39/4888/157003/5c35bd02Ee0be10fc/e510c1344cab2f54.jpg",
+    "title": "//img12.360buyimg.com/tuangou/s750x170_jfs/t15316/209/1136705664/8030/71099545/5a4626ebN8fea2205.png"
+  }, {
+    "commodities": [{
+      "$numberLong": "1"
+    }, {
+      "$numberLong": "2"
+    }, {
+      "$numberLong": "5"
+    }, {
+      "$numberLong": "3"
+    }],
+    "desc": "//img14.360buyimg.com/tuangou/s750x270_jfs/t1/18169/24/4734/158756/5c35bd17E6d82315f/2afcf1d86d04f088.jpg",
+    "title": "//img10.360buyimg.com/tuangou/s750x170_jfs/t15328/270/809894122/7669/cc12bee5/5a38bbd7Nd9f338f0.png"
+  }],
+  "thumbnail": "//img14.360buyimg.com/popshop/s190x80_jfs/t11023/223/1027006619/7985/c520a46c/5a379a4aN9d105368.png",
+  "title": "店铺4",
+  "_openid": "oFQSH5MekinNSc_yqH9dNlmKh6vI"
+}

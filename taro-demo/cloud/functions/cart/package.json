@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "tcb-admin-node": "^1.0.26"
+    "wx-server-sdk": "^0.2.1"
   }
 }

@@ -258,7 +258,7 @@ function queryStringToJson (queryString) {
   return result
 }
 
-module.exports = {
+export {
   getAreas,
   getLoginStatus,
   goLogin,

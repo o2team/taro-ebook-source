@@ -405,8 +405,8 @@ class Detail extends Component {
 }
 
 export default connect(({
-                          detail
-                        }) => ({
+  detail
+}) => ({
   isFetching: detail.isFetching,
   sku: detail.sku,
   cartInfo: detail.cartInfo,

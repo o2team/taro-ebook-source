@@ -46,14 +46,14 @@ export function fetchOrderList (callback) {
 
     Taro.hideLoading()
     const data = res.result.data
-    if (data.length !== 0) {
+    if (data) {
       const orderData = handleOrderData(data)
       dispatch(receive('orderList', orderData))
       if (callback) {
         callback(orderData)
       }
     } else {
-      await Taro.showToast({
+      Taro.showToast({
         icon: 'none',
         title: '请求失败，请重试！'
       })

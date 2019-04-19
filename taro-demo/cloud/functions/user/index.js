@@ -1,4 +1,4 @@
-const app = require('tcb-admin-node')
+const app = require('wx-server-sdk')
 
 const { addUser } = require('./addUser.js')
 const { getUser } = require('./getUser.js')
@@ -16,6 +16,8 @@ exports.main = async (event, context) => {
     res = await addUser(db, data)
   } else if (func === 'getUser') {
     res = await getUser(db, data)
+  } else if (func === 'getOpenId') {
+    res = event.userInfo
   }
 
   return {

@@ -62,8 +62,8 @@ class CommondityContainer extends Component {
 }
 
 export default connect(({
-                          cart
-                        }) => {
+  cart
+}) => {
   return {
     editSkuData: cart.editSkuData,
     commoditys: cart.commoditys,

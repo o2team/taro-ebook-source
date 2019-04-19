@@ -25,6 +25,23 @@ import {
 import { parseMoney } from '../utils/util'
 import { getOpenId, getH5UniqueId } from '../utils/index'
 
+function a () {
+  console.log(111)
+}
+
+function b () {
+  console.log(222)
+}
+
+function d () {
+  console.log(333)
+}
+
+const c = [a, b, d].reduce((a, b) => {
+  return (aaa) =>{ 
+    return a(b(aaa))
+  }
+})
 const aMap = {
   REQUEST_CART: createAction(REQUEST_CART, datas => datas),
   RECEIVE_CART: createAction(RECEIVE_CART, datas => datas),
@@ -51,7 +68,7 @@ export function fetchCart () {
     let res
     if (process.env.TARO_ENV === 'weapp') {
       const _openId = await getOpenId()
-      res = await wx.cloud.callFunction({
+      res = await Taro.cloud.callFunction({
         name: 'cart',
         data: {
           func: 'getCart',
@@ -69,7 +86,7 @@ export function fetchCart () {
       res = await getCart(h5Id)
     }
     const data = res.result.data
-    if (data.length !== 0) {
+    if (data) {
       const cartData = handleCartData(data)
       dispatch(aMap[RECEIVE_CART](cartData))
     } else {
@@ -171,7 +188,6 @@ export function fetchCheckCart (skus) {
 }
 
 export function fetchInvertCheckCart (skus) {
-  console.log(234234)
   return async (dispatch, getState) => {
     console.log(skus)
     dispatch(aMap[REQUEST_INVERSE_CHECK]())
@@ -355,20 +371,28 @@ export function checkDelCart (delSkus) {
   return (dispatch, getState) => {
     const { commoditys } = getState().cart
     let commoditysCheckDelAll = true
+
     for (let commodity of commoditys) {
       const { shop, skus } = commodity
       let checkDelAll = true
-      skus.forEach(sku => {
+      const newSkus = skus.map(sku => {
         const isChoose = delSkus.filter(delSku => { return delSku.skuId === sku.skuId }).length !== 0
         // 是否处于选中态
-        if (isChoose) sku.checkDel = true
+        if (isChoose) {
+          sku = {
+            ...sku,
+            checkDel: true
+          }
+        }
         if (!sku.checkDel) checkDelAll = false
+        return sku
       })
+      commodity.skus = newSkus
       shop.checkDelAll = checkDelAll
       if (!shop.checkDelAll) commoditysCheckDelAll = false
     }
     // 返回新的数组
-    const newCommoditys = commoditys.slice(0)
+    const newCommoditys = commoditys.map(commodity => { return { ...commodity } })
 
     dispatch(aMap[CHECK_DEL]({
       commoditys: newCommoditys,
@@ -384,17 +408,24 @@ export function inverseCheckDelCart (delSkus) {
     for (let commodity of commoditys) {
       const { shop, skus } = commodity
       let checkDelAll = true
-      skus.forEach(sku => {
+      const newSkus = skus.map(sku => {
         const isChoose = delSkus.filter(delSku => { return delSku.skuId === sku.skuId }).length !== 0
         // 是否处于删除态
-        if (isChoose) sku.checkDel = false
+        if (isChoose) {
+          sku = {
+            ...sku,
+            checkDel: false
+          }
+        }
         if (!sku.checkDel) checkDelAll = false
+        return sku
       })
+      commodity.skus = newSkus
       shop.checkDelAll = checkDelAll
       if (!shop.checkDelAll) commoditysCheckDelAll = false
     }
     // 返回新的数组
-    const newCommoditys = commoditys.slice(0)
+    const newCommoditys = commoditys.map(commodity => { return { ...commodity } })
 
     dispatch(aMap[INVERSE_CHECK_DEL]({
       commoditys: newCommoditys,
@@ -420,7 +451,7 @@ function handleCartData (data) {
   const offSales = []
   let checkCartNum = 0
   let totalPrice = 0
-  let checkAll = true
+  let checkAll = data.cartNum !== 0
 
   const { cartInfo, shopMap } = data
   const realShopMap = shopMap[0]

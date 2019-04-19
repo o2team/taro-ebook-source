@@ -215,7 +215,6 @@ class Commondity extends Component {
   render () {
     const {isFixedBar, isEditStatus, commoditys = []} = this.props
     const {showConfirm, changeNumMap} = this.state
-
     const hasCommodity = commoditys.length !== 0
 
     const isNeedFixedBar = isFixedBar && hasCommodity

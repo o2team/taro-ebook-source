@@ -19,7 +19,8 @@ class Index extends Component {
     backgroundTextStyle: 'dark',
     disableScroll: true
   }
-
+ 
+  
   constructor () {
     super(...arguments)
     this.state = {
@@ -132,7 +133,7 @@ class Index extends Component {
   }
 
   render () {
-    const {animationClass, shouldIndexHidden, showAuthModal} = this.state
+    const { animationClass, shouldIndexHidden, showAuthModal } = this.state
     const {floorData = []} = this.props.homeData
     const indexClassNames = classnames('container', 'index', animationClass, {
       hidden: shouldIndexHidden
