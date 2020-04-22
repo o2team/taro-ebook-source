@@ -10,8 +10,8 @@ class Index extends Component {
     navigationBarTitleText: '首页'
   }
 
-  constructor () {
-    super ()
+  constructor (props) {
+    super (props)
 
     this.state = {
       newTodo: ''
